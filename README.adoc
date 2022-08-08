@@ -13,3 +13,4 @@
 :icons: font
 
 This project was created on 2022-08-08 from a template.
+Here you ca find my solving of Liang Java Tutorial tasks and inner codes for each chapter.

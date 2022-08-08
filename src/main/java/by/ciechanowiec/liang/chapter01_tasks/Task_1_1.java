@@ -1,6 +1,7 @@
-package by.ciechanowiec.liang.Chapter01tasks;
+package by.ciechanowiec.liang.chapter01_tasks;
 
-public class Task_1_1 {
+class Task_1_1 {
+
     public static void main(String[] args) {
         System.out.println("Welcome to Java");
         System.out.println("Welcome to Computer Science");

@@ -1,6 +1,7 @@
-package by.ciechanowiec.liang.Chapter01tasks;
+package by.ciechanowiec.liang.chapter01_tasks;
 
-public class Task_1_4 {
+class Task_1_4 {
+
     public static void main(String[] args) {
         System.out.println("""
                 a     a^2     a^3

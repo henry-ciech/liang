@@ -1,9 +1,10 @@
-package by.ciechanowiec.liang.Chapter01tasks;
+package by.ciechanowiec.liang.chapter01_tasks;
 
-public class Task_1_11 {
-    final static int days = 365 * 5;
-    final static int seconds = 86400 * days;
-    final static int presentPopulation = 312032486;
+public class
+Task_1_11 {
+    private static final int days = 365 * 5;
+    private static final int seconds = 86400 * days;
+    private static final int presentPopulation = 312032486;
 
     public static void main(String[] args) {
         int peopleBorn = seconds / 7;

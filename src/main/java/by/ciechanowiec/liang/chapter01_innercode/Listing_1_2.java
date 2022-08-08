@@ -1,6 +1,7 @@
-package by.ciechanowiec.liang.Chapter01innercode;
+package by.ciechanowiec.liang.chapter01_innercode;
 
-public class Listing_1_2 {
+class Listing_1_2 {
+
     public static void main(String[] args) {
         System.out.println("Programming is fun!");
         System.out.println("Fundamentals First");
