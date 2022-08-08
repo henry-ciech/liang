@@ -1,0 +1,2 @@
+This is the first line from a sample file.
+This is the second line from a sample file.
