@@ -1,0 +1,15 @@
+[.text-justify]
+= liang
+:reproducible:
+:doctype: article
+:author: Heryk Ciechanowiec
+:email: henryk.ciechanowiec@gmail.com
+:chapter-signifier:
+:sectnums:
+:sectnumlevels: 5
+:sectanchors:
+:toc: left
+:toclevels: 5
+:icons: font
+
+This project was created on 2022-08-08 from a template.
