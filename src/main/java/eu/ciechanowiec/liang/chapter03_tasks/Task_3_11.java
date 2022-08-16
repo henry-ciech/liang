@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 class Task_3_11 {
 
+    private final static String HAS_31_DAYS = " has 31 days";
+    private final static String HAS_30_DAYS = " has 30 days";
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -14,9 +17,7 @@ class Task_3_11 {
         boolean isLeapYear = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
 
         switch (month) {
-            case 1 -> {
-                System.out.println("January " + year + " has 31 days");
-            }
+            case 1 -> System.out.println("January " + year + HAS_31_DAYS);
             case 2 -> {
                 if (isLeapYear) {
                     System.out.println("February " + year + " has 29 days");
@@ -24,36 +25,17 @@ class Task_3_11 {
                     System.out.println("February " + year + " has 28 days");
                 }
             }
-            case 3 -> {
-                System.out.println("March " + year + " has 31 days");
-            }
-            case 4 -> {
-                System.out.println("April " + year + " has 30 days");
-            }
-            case 5 -> {
-                System.out.println("May " + year + " has 31 days");
-            }
-            case 6 -> {
-                System.out.println("June " + year + " has 30 days");
-            }
-            case 7 -> {
-                System.out.println("July " + year + " has 31 days");
-            }
-            case 8 -> {
-                System.out.println("August " + year + " has 31 days");
-            }
-            case 9 -> {
-                System.out.println("September " + year + " has 30 days");
-            }
-            case 10 -> {
-                System.out.println("October " + year + " has 31 days");
-            }
-            case 11 -> {
-                System.out.println("November " + year + " has 30 days");
-            }
-            case 12 -> {
-                System.out.println("December " + year + " has 31 days");
-            }
+            case 3 -> System.out.println("March " + year + HAS_31_DAYS);
+            case 4 -> System.out.println("April " + year + HAS_30_DAYS);
+            case 5 -> System.out.println("May " + year + HAS_31_DAYS);
+            case 6 -> System.out.println("June " + year + HAS_30_DAYS);
+            case 7 -> System.out.println("July " + year + HAS_31_DAYS);
+            case 8 -> System.out.println("August " + year + HAS_31_DAYS);
+            case 9 -> System.out.println("September " + year + HAS_30_DAYS);
+            case 10 -> System.out.println("October " + year + HAS_31_DAYS);
+            case 11 -> System.out.println("November " + year + HAS_30_DAYS);
+            case 12 -> System.out.println("December " + year + HAS_31_DAYS);
+            default -> throw new RuntimeException("Invalid input");
         }
     }
 }

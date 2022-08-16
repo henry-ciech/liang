@@ -20,8 +20,8 @@ class Task_2_19 {
         double side2 = Math.pow(Math.pow(x3 - x1, 2) + Math.pow(y3 - y1, 2), 0.5);
         double side3 = Math.pow(Math.pow(x3 - x2, 2) + Math.pow(y3 - y2, 2), 0.5);
 
-        double s = (side1 + side2 + side3) / 2;
-        double area = Math.pow(s * (s - side1) * (s - side2) * (s - side3), 0.5);
+        double halfPerimeter = (side1 + side2 + side3) / 2;
+        double area = Math.pow(halfPerimeter * (halfPerimeter - side1) * (halfPerimeter - side2) * (halfPerimeter - side3), 0.5);
         System.out.println("The area of the triangle is " + (int) (area * 10) / 10.0);
     }
 }

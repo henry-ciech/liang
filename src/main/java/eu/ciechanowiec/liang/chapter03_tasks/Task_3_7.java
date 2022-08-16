@@ -32,21 +32,26 @@ class Task_3_7 {
         } else if (numberOfDollars > 1) {
             System.out.println(" " + numberOfDollars + " dollars");
         }
+
         if (numberOfQuarters == 1) {
             System.out.println(" " + numberOfQuarters + " quarter");
         } else if (numberOfQuarters > 1) {
             System.out.println(" " + numberOfQuarters + " quarters");
         }
+
         if (numberOfDimes == 1) {
             System.out.println(" " + numberOfDimes + " dime");
         } else if (numberOfDimes > 1) {
             System.out.println(" " + numberOfDimes + " dimes");
         }
+
         if (numberOfNickels == 1) {
             System.out.println(" " + numberOfNickels + " nickel");
-        } else if (numberOfNickels > 1) {
+        } else {
             System.out.println(" " + numberOfNickels + " nickels");
-        } if (numberOfPennies == 1) {
+        }
+
+        if (numberOfPennies == 1) {
             System.out.println(" " + numberOfPennies + " pennie");
         } else if (numberOfPennies > 1) {
             System.out.println(" " + numberOfPennies + " pennies");

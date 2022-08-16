@@ -1,12 +1,15 @@
 package eu.ciechanowiec.liang.chapter03_tasks;
 
+import java.util.Random;
 import java.util.Scanner;
+import java.util.random.RandomGenerator;
 
 class Task_3_17 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int number = (int) (Math.random() * 3);
+        RandomGenerator random = new Random();
+        int number = random.nextInt() * 3;
 
         System.out.println("""
                 Choose:

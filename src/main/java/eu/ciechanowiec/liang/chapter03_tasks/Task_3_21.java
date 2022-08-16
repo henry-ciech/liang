@@ -11,47 +11,33 @@ class Task_3_21 {
         int year = scanner.nextInt();
 
         System.out.println("Enter month:");
-        int m = scanner.nextInt();
+        int month = scanner.nextInt();
 
-        System.out.println("Enter the day of the month: 1-31:");
-        int q = scanner.nextInt();
+        System.out.println("Enter the day of the month (1-31):");
+        int dayOfMonth = scanner.nextInt();
 
-        if (m == 1) {
-            m = 13;
+        if (month == 1) {
+            month = 13;
             year -= 1;
-        } else if (m == 2) {
-            m = 14;
+        } else if (month == 2) {
+            month = 14;
             year -= 1;
         }
 
-        int j = year / 100;
-        int k = year % 100;
+        int yearDivide100 = year / 100;
+        int century = year % 100;
 
 
-        int h = (q + 26 * (m + 1) / 10 + k + k / 4 + j / 4 + 5 * j) % 7;
+        int dayOfWeek = (dayOfMonth + 26 * (month + 1) / 10 + century + century / 4 + yearDivide100 / 4 + 5 * yearDivide100) % 7;
 
-        switch (h) {
-            case 0 -> {
-                System.out.print("Day of the week is Saturday ");
-            }
-            case 1 -> {
-                System.out.print("Day of the week is  Sunday");
-            }
-            case 2 -> {
-                System.out.print("Day of the week is  Monday");
-            }
-            case 3 -> {
-                System.out.print("Day of the week is  Tuesday");
-            }
-            case 4 -> {
-                System.out.print("Day of the week is  Wednesday");
-            }
-            case 5 -> {
-                System.out.print("Day of the week is  Thursday");
-            }
-            case 6 -> {
-                System.out.print("Day of the week is  Friday");
-            }
+        switch (dayOfWeek) {
+            case 0 -> System.out.print("Day of the week is Saturday ");
+            case 1 -> System.out.print("Day of the week is  Sunday");
+            case 2 -> System.out.print("Day of the week is  Monday");
+            case 3 -> System.out.print("Day of the week is  Tuesday");
+            case 4 -> System.out.print("Day of the week is  Wednesday");
+            case 5 -> System.out.print("Day of the week is  Thursday");
+            case 6 -> System.out.print("Day of the week is  Friday");
         }
     }
 }

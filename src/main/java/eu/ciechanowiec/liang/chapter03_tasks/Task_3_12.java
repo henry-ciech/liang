@@ -7,7 +7,7 @@ class Task_3_12 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter a three digit integer");
+        System.out.println("Enter a three digit integer:");
         int number = scanner.nextInt();
 
         int digit1 = number / 100;

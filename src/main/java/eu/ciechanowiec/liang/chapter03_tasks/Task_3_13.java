@@ -86,8 +86,7 @@ public class Task_3_13 {
                         + (190200 - 117450) * 0.28 + (372950 - 190200) * 0.33 + (income - 372950) * 0.35;
             }
         } else {
-            System.out.println("Error: invalid status");
-            System.exit(1);
+            throw new RuntimeException("Error: invalid status");
         }
 
         System.out.println("Tax is $" + (int) (tax * 100) / 100.0);

@@ -17,15 +17,19 @@ class Task_3_1 {
         double discriminant = Math.pow(b, 2) - 4 * a * c;
 
         if (discriminant > 0) {
-            r1 = (int) ((-b + Math.pow(discriminant, 0.5)) / (2 * a) * 1000) / 1000.0;
+            r1 = count(discriminant, a, b);
             r2 = (int) ((-b - Math.pow(discriminant, 0.5)) / (2 * a) * 1000) / 1000.0;
 
             System.out.println("The equation has two roots " + r1 + " and " + r2);
         } else if (discriminant == 0) {
-            r1 = (int) ((-b + Math.pow(discriminant, 0.5)) / (2 * a) * 1000) / 1000.0;
+            r1 = count(discriminant, a, b);
             System.out.println("The equation has one root " + r1);
         } else {
             System.out.println("The equation has no real roots");
         }
+    }
+
+    private static double count(double discriminant, double a, double b) {
+        return ((-b + Math.pow(discriminant, 0.5)) / (2 * a) * 1000) / 1000.0;
     }
 }

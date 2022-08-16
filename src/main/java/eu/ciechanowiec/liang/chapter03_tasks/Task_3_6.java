@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 class Task_3_6 {
 
-    private static final Double KILOGRAMS_PER_POUND = 0.45359237;
-    private static final Double METERS_PER_INCH = 0.3048;
+    private static final double KILOGRAMS_PER_POUND = 0.45359237;
+    private static final double METERS_PER_INCH = 0.3048;
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -17,7 +17,7 @@ class Task_3_6 {
         System.out.println("Enter feet:");
         int feet = scanner.nextInt();
 
-        System.out.println("Enter inches: ");
+        System.out.println("Enter inches:");
         int inches = scanner.nextInt();
 
         double heightInInches = feet + inches / 100.0;

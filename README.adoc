@@ -12,5 +12,8 @@
 :toclevels: 5
 :icons: font
 
-This project was created on 2022-08-08 from a template.
-Here you ca find my solving of Liang Java Tutorial tasks and inner codes for each chapter.
+Here you can find my solution of Liang Java Tutorial tasks and inner codes for each chapter.
+
+== TODO
+[upperalpha]
+. Task 3_28

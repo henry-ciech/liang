@@ -7,7 +7,6 @@ class Task_3_15 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int lottery = (int) (Math.random() * 1000);
-        System.out.println(lottery);
 
         System.out.println("Enter your lottery pick (three digits):");
         int guess = scanner.nextInt();
@@ -37,7 +36,7 @@ class Task_3_15 {
                 || guessDigit3 == lotteryDigit1
                 || guessDigit3 == lotteryDigit2
                 || guessDigit3 == lotteryDigit3) {
-            System.out.println("Match one digit: you win 1,000$");
+            System.out.println("Match one or two digits: you win 1,000$");
         } else {
             System.out.println("Sorry, no match");
         }

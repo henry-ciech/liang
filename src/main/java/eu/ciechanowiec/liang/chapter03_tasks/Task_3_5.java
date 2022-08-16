@@ -15,50 +15,25 @@ public class Task_3_5 {
         int futureDay = todayDay + daysElapsed;
 
         switch (todayDay) {
-            case 0 -> {
-                System.out.print("Today is Sunday ");
-            }
-            case 1 -> {
-                System.out.print("Today is  Monday");
-            }
-            case 2 -> {
-                System.out.print("Today is  Tuesday");
-            }
-            case 3 -> {
-                System.out.print("Today is  Wednesday");
-            }
-            case 4 -> {
-                System.out.print("Today is  Thursday");
-            }
-            case 5 -> {
-                System.out.print("Today is  Friday");
-            }
-            case 6 -> {
-                System.out.print("Today is  Saturday");
-            }
+            case 0 -> System.out.print("Today is Sunday ");
+            case 1 -> System.out.print("Today is Monday");
+            case 2 -> System.out.print("Today is Tuesday");
+            case 3 -> System.out.print("Today is Wednesday");
+            case 4 -> System.out.print("Today is Thursday");
+            case 5 -> System.out.print("Today is Friday");
+            case 6 -> System.out.print("Today is Saturday");
+            default -> throw new RuntimeException("Invalid input");
         }
+
         switch (futureDay % 7) {
-            case 0 -> {
-                System.out.print("and the future day is Sunday ");
-            }
-            case 1 -> {
-                System.out.print("and the future day is  Monday");
-            }
-            case 2 -> {
-                System.out.print("and the future day is  Tuesday");
-            }
-            case 3 -> {
-                System.out.print("and the future day is  Wednesday");
-            }
-            case 4 -> {
-                System.out.print("and the future day is  Thursday");
-            }
-            case 5 -> {
-                System.out.print("and the future day is  Friday");
-            }
-            case 6 -> {
-                System.out.print("and the future day is  Saturday");
-            }
+            case 0 -> System.out.println(" and the future day is Sunday ");
+            case 1 -> System.out.println(" and the future day is Monday");
+            case 2 -> System.out.println(" and the future day is Tuesday");
+            case 3 -> System.out.println(" and the future day is Wednesday");
+            case 4 -> System.out.println(" and the future day is Thursday");
+            case 5 -> System.out.println(" and the future day is Friday");
+            case 6 -> System.out.println(" and the future day is Saturday");
+            default -> throw new RuntimeException("Invalid input");
         }
     }
 }

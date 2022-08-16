@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 class Task_3_28 {
 
-    public static void main(String[] args) { //works INCORRECT
+    // This task hasn't been finished. Below there is working version.
+    public static void main(String[] args) { //works INCORRECTLY
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter r1's center x-, y-coordinates, width and height:");
