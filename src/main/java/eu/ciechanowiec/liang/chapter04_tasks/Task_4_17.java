@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 class Task_4_17 {
 
-    private final static String HAS_31_DAYS = " has 31 days";
-    private final static String HAS_30_DAYS = " has 30 days";
+    private static final String HAS_31_DAYS = " has 31 days";
+    private static final String HAS_30_DAYS = " has 30 days";
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
