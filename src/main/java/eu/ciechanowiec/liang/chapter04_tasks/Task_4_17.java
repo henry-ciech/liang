@@ -16,7 +16,6 @@ class Task_4_17 {
         System.out.println("Enter a year:");
         int year = scanner.nextInt();
 
-
         boolean isLeapYear = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
 
         switch (month) {

@@ -39,7 +39,7 @@ class Task_4_23 {
                   Federal Withholding (%d%%): $%4.2f
                   State Withholding (%d%%): $%4.2f
                   Total Deduction: $%4.2f
-                Net Pay: $%4.2f
+                Net Pay: $%4.2f%n
                 """, name, workedHours, hourlyPayRate, grossPay,
                 federalWithHoldingPercent, federalWithHolding,
                 stateWithHoldingPercent, stateWithHolding, totalDeduction,

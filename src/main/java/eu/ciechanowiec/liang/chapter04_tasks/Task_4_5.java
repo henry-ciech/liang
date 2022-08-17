@@ -15,6 +15,6 @@ class Task_4_5 {
 
         double area = (numberOfSides * Math.pow(side, 2)) / (4 * Math.tan(Math.PI / numberOfSides));
 
-        System.out.printf("The area of the polygon is %4.2f", area);
+        System.out.printf("The area of the polygon is %4.2f%n", area);
     }
 }

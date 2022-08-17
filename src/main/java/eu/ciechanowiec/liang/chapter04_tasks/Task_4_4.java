@@ -12,6 +12,6 @@ public class Task_4_4 {
 
         double area = (6 * Math.pow(side, 2)) / (4 * Math.tan(Math.PI / 6));
 
-        System.out.printf("The area of the hexagon: %4.2f", area);
+        System.out.printf("The area of the hexagon: %4.2f%n", area);
     }
 }

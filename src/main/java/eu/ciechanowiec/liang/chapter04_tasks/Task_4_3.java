@@ -29,7 +29,7 @@ class Task_4_3 {
                 * (halfPerimeterTriangle2 - side2) * (halfPerimeterTriangle2 - middleSide), 0.5);
 
 
-        System.out.printf("Perimeter: %4.2f", areaTriangle1 + areaTriangle2);
+        System.out.printf("Perimeter: %4.2f%n", areaTriangle1 + areaTriangle2);
     }
 
     private static double calculateDistance( double x1, double y1, double x2, double y2) {

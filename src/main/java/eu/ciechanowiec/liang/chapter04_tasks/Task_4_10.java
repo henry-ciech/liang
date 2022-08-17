@@ -31,7 +31,8 @@ class Task_4_10 {
 
         String set4 = """
                 8 9 10 11
-                12 13 14 15
+                12
+                 13 14 15
                 24 25 26 27
                 28 29 30 31
                 """;
@@ -47,7 +48,7 @@ class Task_4_10 {
         System.out.println(set1);
         String answer = scanner.nextLine();
 
-        if (answer.equalsIgnoreCase("yes")) {
+        if (answer.equalsIgnoreCase("Y")) {
             day += 1;
         }
 
@@ -55,7 +56,7 @@ class Task_4_10 {
         System.out.println(set2);
         answer = scanner.nextLine();
 
-        if (answer.equalsIgnoreCase("yes")) {
+        if (answer.equalsIgnoreCase("Y")) {
             day += 2;
         }
 
@@ -63,7 +64,7 @@ class Task_4_10 {
         System.out.println(set3);
         answer = scanner.nextLine();
 
-        if (answer.equalsIgnoreCase("yes")) {
+        if (answer.equalsIgnoreCase("Y")) {
             day += 4;
         }
 
@@ -71,7 +72,7 @@ class Task_4_10 {
         System.out.println(set4);
         answer = scanner.nextLine();
 
-        if (answer.equalsIgnoreCase("yes")) {
+        if (answer.equalsIgnoreCase("Y")) {
             day += 8;
         }
 
@@ -79,7 +80,7 @@ class Task_4_10 {
         System.out.println(set5);
         answer = scanner.nextLine();
 
-        if (answer.equalsIgnoreCase("yes")) {
+        if (answer.equalsIgnoreCase("Y")) {
             day += 16;
         }
 

@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 class Task_3_28 {
 
-    // This task hasn't been finished. Below there is working version.
-    public static void main(String[] args) { //works INCORRECTLY
+    // This task hasn't been finished. Below there is a scratch - it doesn't work correctly
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter r1's center x-, y-coordinates, width and height:");
@@ -29,8 +29,6 @@ class Task_3_28 {
         double r2LeftBoarder = r2X + r2Width / 2;
         double r2UpperBoarder = r2Y + r2Height / 2;
         double r2LowerBoarder = r2Y + r2Height / 2;
-
-
 
         System.out.println("r1RightBoarder " + r1RightBoarder);
         System.out.println("r1LeftBoarder " + r1LeftBoarder);

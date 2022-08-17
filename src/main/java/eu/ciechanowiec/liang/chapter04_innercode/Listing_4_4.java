@@ -16,7 +16,7 @@ class Listing_4_4 {
 
         char ch = Character.toUpperCase(hexString.charAt(0));
 
-        if ('A' <= ch && ch <+ 'f') {
+        if ('A' <= ch && ch <= 'f') {
             int value = ch - 'A' + 10;
             System.out.println("The decimal value for hex digit " + ch + " is " + value);
         } else if (Character.isDigit(ch)) {
