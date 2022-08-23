@@ -5,7 +5,7 @@ class Task_5_23 {
     public static void main(String[] args) {
         double sumLeftToRight = 0;
         double sumRightToLeft = 0;
-        double difference = 0;
+        double difference;
 
         for (int i = 1; i <= 50000; i++) {
             sumLeftToRight += 1.0 / i;

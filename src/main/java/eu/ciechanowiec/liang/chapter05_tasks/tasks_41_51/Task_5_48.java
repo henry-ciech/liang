@@ -8,7 +8,7 @@ class Task_5_48 {
         Scanner scanner = new Scanner(System.in);
         String output = "";
 
-        System.out.println("Enter a String:");
+        System.out.println("Enter a string:");
         String input = scanner.nextLine();
 
         for (int i = 0; i < input.length(); i+=2) {

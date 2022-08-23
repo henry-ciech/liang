@@ -17,6 +17,6 @@ class Task_5_50 {
                 upperCase++;
             }
         }
-        System.out.printf("uppercase letters: %d", upperCase);
+        System.out.printf("uppercase letters: %d%n", upperCase);
     }
 }

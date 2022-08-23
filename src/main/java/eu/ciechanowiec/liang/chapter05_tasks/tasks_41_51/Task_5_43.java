@@ -12,6 +12,6 @@ class Task_5_43 {
             }
         }
 
-        System.out.printf("The total umber of combinations: %d", count);
+        System.out.printf("The total number of combinations: %d%n", count);
     }
 }

@@ -10,7 +10,7 @@ class Task_5_41 {
         double max = 0;
         double number = -1;
 
-        System.out.println("Enter number by one:");
+        System.out.println("Enter number by one (0 - end):");
 
         while (number != 0) {
             number = scanner.nextDouble();
@@ -27,7 +27,7 @@ class Task_5_41 {
 
         System.out.printf("""
                 The largest number is %.1f
-                The occurrence count of the largest number is %d%n
+                The occurrence count of the largest number is %d
                 """, max, count);
     }
 }

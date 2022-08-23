@@ -23,6 +23,6 @@ class Task_5_30 {
             total += amount;
         }
 
-        System.out.printf("'%.3f", total);
+        System.out.printf("%.3f%n", total);
     }
 }

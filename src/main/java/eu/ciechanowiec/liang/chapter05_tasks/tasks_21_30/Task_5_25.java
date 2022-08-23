@@ -8,7 +8,7 @@ class Task_5_25 {
         double pi3 = 1.0;
 
         for (int i = 2; i <= 100000; i++) { //for 10.000
-            pi1 += Math.pow(-1 , i + 1) / (2 * i - 1.0D);
+            pi1 += Math.pow(-1 , 1 + i) / (2 * i - 1.0D);
 
             if (i == 10000) {
                 System.out.printf("i: %d%npi: %f%n", i, 4.0 * pi1);

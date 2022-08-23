@@ -8,12 +8,11 @@ class Task_5_46 {
         Scanner scanner = new Scanner(System.in);
         StringBuilder input1 = new StringBuilder();
 
-        System.out.println("Enter the String:");
+        System.out.println("Enter the string:");
         String input = scanner.nextLine();
 
         input1.append(input);
         input1.reverse();
-
 
         System.out.printf("The reversed string is %s%n", input1);
     }

@@ -14,7 +14,7 @@ class Task_5_1 {
         double average = 0;
         double input = -1;
 
-        System.out.println("Enter an integer, the input ends if it is 0:");
+        System.out.println("Enter integers, the input ends if it is 0:");
 
         while (true) {
             input = scanner.nextDouble();

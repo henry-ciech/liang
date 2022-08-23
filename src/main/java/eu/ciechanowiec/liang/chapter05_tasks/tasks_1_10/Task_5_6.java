@@ -7,7 +7,7 @@ class Task_5_6 {
 
         for (int i = 1, j = 20; i <= 10; i++, j+=5) {
             System.out.printf("%4d       %6.3f       |      ", i, i * 1.609);
-            System.out.printf("%d            %.3f%n", j, j / 1.609);
+            System.out.printf("%d           %.3f%n", j, j / 1.609);
         }
     }
 }

@@ -21,7 +21,7 @@ class Task_5_45 {
 
         System.out.printf("""
                 The mean is %.3f
-                The standard deviation is %.3f%n
+                The standard deviation is %.3f
                 """, mean, deviation);
     }
 }

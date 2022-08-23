@@ -6,7 +6,7 @@ class Task_5_3 {
         System.out.println("   Kilograms   Pounds");
 
         for (int i = 1; i < 200; i++) {
-            System.out.printf("%4d            %4.2f%n", i, i * 2.2);
+            System.out.printf("%4d           %4.2f%n", i, i * 2.2);
         }
     }
 }

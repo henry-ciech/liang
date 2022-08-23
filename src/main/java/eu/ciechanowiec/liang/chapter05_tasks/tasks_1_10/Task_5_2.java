@@ -49,7 +49,7 @@ class Task_5_2 {
         System.out.printf("""
                 Correct count: %d
                 Test time: %4.2f seconds
-                %s%n
+                %s
                 """, correctCount, testTime, output);
     }
 }

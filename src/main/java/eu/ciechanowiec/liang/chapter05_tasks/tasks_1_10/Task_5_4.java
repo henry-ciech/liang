@@ -6,7 +6,7 @@ class Task_5_4 {
         System.out.println("   Miles   Kilometers");
 
         for (int i = 1; i <= 10; i++) {
-            System.out.printf("%4d     %.3f%n", i, i * 1.609);
+            System.out.printf("%4d       %.3f%n", i, i * 1.609);
         }
     }
 }

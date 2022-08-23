@@ -24,6 +24,6 @@ class Task_5_47 {
             checksum = 0;
         }
 
-        System.out.printf("%s%d", number, checksum);
+        System.out.printf("%s%d%n", number, checksum);
     }
 }

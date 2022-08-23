@@ -19,9 +19,9 @@ class Task_5_20 {
 
             if (isPrime) {
                 if (count % NUMBERS_PER_LINE == 0) {
-                    System.out.printf("%n%d ", i);
+                    System.out.printf("%n%4d ", i);
                 } else {
-                    System.out.printf("%d ", i);
+                    System.out.printf("%4d ", i);
                 }
                 count++;
              }

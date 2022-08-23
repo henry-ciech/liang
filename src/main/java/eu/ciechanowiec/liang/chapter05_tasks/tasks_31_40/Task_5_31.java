@@ -21,7 +21,7 @@ class Task_5_31 {
         for (int i = 1; i <= month; i++) {
             depositAmount *= monthPercentage;
 
-            System.out.printf(" %4d   \t%f%n", i, depositAmount);
+            System.out.printf(" %4d   \t%.2f%n", i, depositAmount);
         }
 
     }

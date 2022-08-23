@@ -9,7 +9,7 @@ class  Task_5_49 {
         int vowels = 0;
         int consonant = 0;
 
-        System.out.println("Enter a letter:");
+        System.out.println("Enter a string:");
         String input = scanner.nextLine();
 
         for (int i = 0; i < input.length(); i++) {

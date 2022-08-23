@@ -5,7 +5,7 @@ import java.util.Scanner;
 class Task_5_21 {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in); //% / 1200
+        Scanner scanner = new Scanner(System.in);
         double annualInterestRate = 5;
 
         System.out.println("Loan amount:");
@@ -14,7 +14,7 @@ class Task_5_21 {
         System.out.println("Number of years:");
         double numberOfYears = scanner.nextDouble();
 
-        System.out.println("Interest rate   Monthly Payment");
+        System.out.println("Interest rate    Monthly Payment\t   Total Payment");
 
         for (; annualInterestRate <= 8.00; annualInterestRate += 0.1250) {
             double monthlyInterestRate = annualInterestRate / 1200;

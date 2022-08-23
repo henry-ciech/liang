@@ -7,10 +7,10 @@ class Task_5_29 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter a year: ");
+        System.out.println("Enter a year: ");
         int year = scanner.nextInt();
 
-        System.out.print("Enter the first day of the year: ");
+        System.out.println("Enter the first day of the year: ");
         int startDay = scanner.nextInt();
 
         int numberOfDaysInMonth = 0;
