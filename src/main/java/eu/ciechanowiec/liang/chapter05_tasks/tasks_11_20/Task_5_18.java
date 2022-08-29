@@ -25,7 +25,7 @@ class Task_5_18 {
         System.out.println("\nPattern C"); //Pattern C
 
         for (int i = 6; i >= 1; i--) {
-            for (int k = 1; k <= i; k++){
+            for (int k = 1; k <= i - 1; k++){
                 System.out.print("  ");
             }
             for (int j = 7 - i; j >= 1; j--) {

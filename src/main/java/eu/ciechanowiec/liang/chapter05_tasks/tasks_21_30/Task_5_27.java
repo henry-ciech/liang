@@ -20,5 +20,7 @@ class Task_5_27 {
                 }
             }
         }
+
+        System.out.println();
     }
 }

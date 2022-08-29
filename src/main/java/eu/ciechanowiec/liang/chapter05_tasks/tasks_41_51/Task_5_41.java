@@ -10,7 +10,7 @@ class Task_5_41 {
         double max = 0;
         double number = -1;
 
-        System.out.println("Enter number by one (0 - end):");
+        System.out.println("Enter number (0 - end):");
 
         while (number != 0) {
             number = scanner.nextDouble();

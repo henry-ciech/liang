@@ -11,7 +11,7 @@ class Task_5_48 {
         System.out.println("Enter a string:");
         String input = scanner.nextLine();
 
-        for (int i = 0; i < input.length(); i+=2) {
+        for (int i = 0; i < input.length(); i += 2) {
             output += input.charAt(i);
         }
 

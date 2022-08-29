@@ -13,7 +13,7 @@ class Task_5_31 {
         System.out.println("Enter annual percentage yield:");
         double monthPercentage = scanner.nextDouble() / 1200 + 1;
 
-        System.out.println("Enter maturity period (number of month)");
+        System.out.println("Enter maturity period (number of month):");
         int month = scanner.nextInt();
 
         System.out.println("\tMonth\tCD Value");

@@ -100,20 +100,17 @@ class Task_5_28 {
         }
     }
 
-    public static String firstDay(int firstDay) {
+    static String firstDay(int firstDay) {
 
-        String firstDayString = "";
-
-        switch (firstDay) {
-            case 0: firstDayString = "Sunday"; break;
-            case 1: firstDayString = "Monday"; break;
-            case 2: firstDayString = "Tuesday"; break;
-            case 3: firstDayString = "Wednesday"; break;
-            case 4: firstDayString = "Thursday"; break;
-            case 5: firstDayString = "Friday"; break;
-            case 6: firstDayString = "Saturday"; break;
-        }
-
-        return firstDayString;
+        return switch (firstDay) {
+            case 0 -> "Sunday";
+            case 1 -> "Monday";
+            case 2 -> "Tuesday";
+            case 3 -> "Wednesday";
+            case 4 -> "Thursday";
+            case 5 -> "Friday";
+            case 6 -> "Saturday";
+            default -> "";
+        };
     }
 }

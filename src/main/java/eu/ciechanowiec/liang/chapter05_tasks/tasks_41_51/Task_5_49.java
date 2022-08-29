@@ -11,6 +11,7 @@ class  Task_5_49 {
 
         System.out.println("Enter a string:");
         String input = scanner.nextLine();
+        System.out.println();
 
         for (int i = 0; i < input.length(); i++) {
             String letter = String.valueOf(input.charAt(i));
@@ -30,8 +31,8 @@ class  Task_5_49 {
         }
 
         System.out.printf("""
-                vowels: %d
-                consonant: %d
+                The number of vowels: %d
+                The number of consonants: %d
                 """, vowels, consonant);
     }
 }

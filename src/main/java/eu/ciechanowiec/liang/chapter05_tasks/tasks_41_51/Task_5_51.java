@@ -24,6 +24,6 @@ class Task_5_51 {
         if (prefix.length() > 0)
             System.out.printf("The common prefix is %s", prefix);
         else
-            System.out.printf("%s and %s have no common prefix", input1, input2);
+            System.out.printf("%s and %s have no common prefix%n", input1, input2);
     }
 }

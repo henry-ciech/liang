@@ -8,12 +8,12 @@ class Task_5_33 {
             int divisor = number - 1;
 
             while (divisor > 0) {
-
                 if (number % divisor == 0) {
                     sum += divisor;
                 }
                 divisor--;
             }
+
             if (sum == number) {
                 System.out.println(number);
             }

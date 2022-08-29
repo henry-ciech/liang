@@ -1,3 +1,6 @@
+
+
+
 [.text-justify]
 = liang
 :reproducible:
@@ -17,3 +20,5 @@ Here you can find my solution of Liang Java Tutorial tasks and inner codes for e
 == TODO
 [upperalpha]
 . Task 3_28
+. Task 5_26
+. Task 6_11

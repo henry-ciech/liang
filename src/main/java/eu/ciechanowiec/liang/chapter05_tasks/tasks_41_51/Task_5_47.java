@@ -7,7 +7,7 @@ class Task_5_47 {
         Scanner scanner = new Scanner(System.in);
         int checksum = 0;
 
-        System.out.println("Enter the first 12 digit of an ISBN-13 as integers:"); //978013213080 or 978013213079
+        System.out.println("Enter the first 12 digits of an ISBN-13 as integers:"); //978013213080 or 978013213079
         String number = scanner.nextLine();
 
         for (int i = 0; i < 12; i++) {
@@ -24,6 +24,6 @@ class Task_5_47 {
             checksum = 0;
         }
 
-        System.out.printf("%s%d%n", number, checksum);
+        System.out.printf("The ISBN-13 number is %s%d%n", number, checksum);
     }
 }

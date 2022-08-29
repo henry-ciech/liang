@@ -11,6 +11,6 @@ class Task_5_26 {
             e += item;
         }
 
-        System.out.printf("e: %.16f", e);
+        System.out.printf("e: %.16f%n", e);
     }
 }

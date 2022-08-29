@@ -5,7 +5,7 @@ class Task_5_24 {
     public static void main(String[] args) {
         double sum = 0;
 
-        for (double i = 1; i <= 100; i+=2) {
+        for (double i = 1; i <= 97; i+=2) {
             for (double j = i + 2; j == i + 2; j++) {
                 sum += i / j;
             }

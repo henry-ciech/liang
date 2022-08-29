@@ -10,6 +10,7 @@ class Task_5_50 {
 
         System.out.println("Enter a string:");
         String input = scanner.nextLine();
+        System.out.println();
 
         for (int i = 0; i < input.length(); i++) {
             char ch = input.charAt(i);
@@ -17,6 +18,6 @@ class Task_5_50 {
                 upperCase++;
             }
         }
-        System.out.printf("uppercase letters: %d%n", upperCase);
+        System.out.printf("The number of uppercase letters: %d%n", upperCase);
     }
 }

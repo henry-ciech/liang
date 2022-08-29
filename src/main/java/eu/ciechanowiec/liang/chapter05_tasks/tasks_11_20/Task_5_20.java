@@ -2,7 +2,6 @@ package eu.ciechanowiec.liang.chapter05_tasks.tasks_11_20;
 
 class Task_5_20 {
 
-
     private static final int NUMBERS_PER_LINE = 8;
 
     public static void main(String[] args) {
@@ -10,7 +9,7 @@ class Task_5_20 {
 
         for (int i = 2; i <= 1000; i++) {
             boolean isPrime = true;
-            for(int divisor = 2; i / 2 >= divisor; divisor++) {
+            for (int divisor = 2; i / 2 >= divisor; divisor++) {
                 if (i % divisor == 0) {
                     isPrime = false;
                     break;
@@ -26,5 +25,7 @@ class Task_5_20 {
                 count++;
              }
         }
+
+        System.out.println();
     }
 }

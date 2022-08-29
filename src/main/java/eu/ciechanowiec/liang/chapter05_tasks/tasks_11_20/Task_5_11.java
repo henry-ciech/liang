@@ -16,5 +16,7 @@ class Task_5_11 {
                 }
             }
         }
+
+        System.out.println();
     }
 }

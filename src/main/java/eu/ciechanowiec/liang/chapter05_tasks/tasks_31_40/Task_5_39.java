@@ -17,6 +17,6 @@ class Task_5_39 {
             salesAmount += 0.01;
         }
 
-        System.out.printf("You need $%.2f sales to earn $30.000%n", salesAmount);
+        System.out.printf("You need $%.2f sales to earn $30,000%n", salesAmount);
     }
 }

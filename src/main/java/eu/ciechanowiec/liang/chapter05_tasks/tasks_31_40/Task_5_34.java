@@ -21,6 +21,8 @@ class Task_5_34 {
                     """);
             int choose = Integer.parseInt(scanner.nextLine());
 
+            System.out.printf("computer choose: %d%n", number);
+
             if (choose == 0 && number == 0) {
                 System.out.println("Draw");
             } else if (choose == 0 && number == 1) {
@@ -49,7 +51,7 @@ class Task_5_34 {
                 System.out.println("Invalid input");
             }
 
-            System.out.printf("cont: %d%n", count);
+            System.out.printf("win/lose count: %d%n%n", count);
         }
     }
 }

@@ -22,6 +22,6 @@ class Listing_5_11 {
             decimal = decimal / 16;
         }
 
-        System.out.printf("The hex number is %S", hex);
+        System.out.printf("The hex number is %s%n", hex);
     }
 }
