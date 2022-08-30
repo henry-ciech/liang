@@ -19,7 +19,7 @@ class Task_6_5 {
         displaySortedNumbers(num1, num2, num3);
     }
 
-    static void displaySortedNumbers(double num1, double num2, double num3) {
+    private static void displaySortedNumbers(double num1, double num2, double num3) {
         double max;
         double mid;
         double min;

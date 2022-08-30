@@ -13,7 +13,7 @@ class Listing_6_8 {
         System.out.printf("The decimal value for hex number %s is %d", hex, hexToDecimal(hex.toUpperCase()));
     }
 
-    static int hexToDecimal(String hex) {
+    private static int hexToDecimal(String hex) {
         int decimalValue = 0;
 
         for (int i = 0; i < hex.length();  i++) {
@@ -24,7 +24,7 @@ class Listing_6_8 {
         return decimalValue;
     }
 
-    static int hexCharToDecimal(char ch) {
+    private static int hexCharToDecimal(char ch) {
         if (ch >= 'A' && ch <= 'F') {
             return 10 + ch - 'A';
         } else {

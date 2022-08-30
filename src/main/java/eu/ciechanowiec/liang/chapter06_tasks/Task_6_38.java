@@ -22,17 +22,17 @@ class Task_6_38 {
         }
     }
 
-    static char getRandomUpperCaseLetter() {
+    private static char getRandomUpperCaseLetter() {
         return getRandomCharacter('A', 'Z');
 
     }
 
-    static char getRandomDigitCharacter() {
+    private static char getRandomDigitCharacter() {
         return getRandomCharacter('0', '9');
     }
 
 
-    public static char getRandomCharacter(char ch1, char ch2) {
+    private static char getRandomCharacter(char ch1, char ch2) {
         return (char)(ch1 + Math.random() * (ch2 - ch1 + 1));
     }
 }

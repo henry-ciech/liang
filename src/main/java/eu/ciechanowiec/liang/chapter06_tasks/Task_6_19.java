@@ -24,12 +24,12 @@ class Task_6_19 {
     }
 
 
-    static boolean isValid(double side1, double side2, double side3) {
+    private static boolean isValid(double side1, double side2, double side3) {
         return side1 + side2 > side3 && side1 + side3 > side2 && side2 + side3 > side1;
     }
 
 
-    static double computeArea(double side1, double side2, double side3) {
+    private static double computeArea(double side1, double side2, double side3) {
         double halfPerimeter = (side1 + side2 + side3) / 2;
         return Math.pow(halfPerimeter * (halfPerimeter - side1) * (halfPerimeter - side2)
                 * (halfPerimeter - side3), 0.5);

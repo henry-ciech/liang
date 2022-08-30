@@ -11,11 +11,11 @@ class Task_6_9 {
             System.out.printf("%6.3f", feetToMeters(i));
             System.out.print("     |     ");
             System.out.printf("%-11.1f", j);
-            System.out.printf("%7.3f\n", metersToFeet(j));
+            System.out.printf("%7.3f&%n", metersToFeet(j));
         }
     }
 
-    static double feetToMeters(double feet) {
+    private static double feetToMeters(double feet) {
         double meters;
         meters = 0.305 * feet;
 

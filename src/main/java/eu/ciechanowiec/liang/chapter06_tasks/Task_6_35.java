@@ -13,7 +13,7 @@ class Task_6_35 {
         System.out.printf("Area: %.1f", area(side));
     }
 
-    static double area(double side) {
+    private static double area(double side) {
         return (5 * Math.pow(side, 2)) / (4 * Math.tan(Math.PI / 5));
     }
 }

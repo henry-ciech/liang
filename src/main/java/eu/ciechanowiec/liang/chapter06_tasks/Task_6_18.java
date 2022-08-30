@@ -17,11 +17,11 @@ class Task_6_18 {
         System.out.printf("%s is %s password%n", password, isValidPassword);
     }
 
-    static boolean isValidLength(String password) {
+    private static boolean isValidLength(String password) {
         return password.length() >= 8;
     }
 
-    static boolean isOnlyLettersAndDigits(String password) {
+    private static boolean isOnlyLettersAndDigits(String password) {
         for (int i = 0; i < password.length(); i++) {
             if (!Character.isLetterOrDigit(password.charAt(i))) {
                 return false;
@@ -31,7 +31,7 @@ class Task_6_18 {
         return true;
     }
 
-    static boolean isTwoDigits(String password) {
+    private static boolean isTwoDigits(String password) {
         int digitCount = 0;
 
         for (int i = 0; i < password.length(); i++) {

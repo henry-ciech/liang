@@ -11,7 +11,7 @@ class Listing_6_1 {
         System.out.printf("The maximum of %d and %d is %d", i, j, k);
     }
 
-    static int max(int num1, int num2) {
+    private static int max(int num1, int num2) {
         int result;
 
         if (num1 > num2) {

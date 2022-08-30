@@ -30,9 +30,9 @@ class Task_6_30 {
             }
 
             if (sum == loseValue1
-             || sum == loseValue2
-             || sum == loseValue3
-             || sum == loseValue4) {
+                    || sum == loseValue2
+                    || sum == loseValue3
+                    || sum == loseValue4) {
                 System.out.println("You lose");
                 break;
             } else {

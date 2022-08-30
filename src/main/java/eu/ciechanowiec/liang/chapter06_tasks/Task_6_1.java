@@ -14,9 +14,7 @@ class Task_6_1 {
         }
     }
 
-    static int getPentagonalNumber(int n) {
-     int pentagonalNumber = n * (3 * n - 1) / 2;
-
-     return pentagonalNumber;
+    private static int getPentagonalNumber(int n) {
+        return n * (3 * n - 1) / 2;
     }
 }

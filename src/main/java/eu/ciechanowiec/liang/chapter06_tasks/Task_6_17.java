@@ -14,7 +14,7 @@ class Task_6_17 {
         printMatrix(n);
     }
 
-    static void printMatrix(int n) {
+    private static void printMatrix(int n) {
         RandomGenerator random = new Random();
 
         for (int i = 1; i <= n; i ++) {

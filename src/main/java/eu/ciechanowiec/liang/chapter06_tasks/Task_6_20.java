@@ -13,7 +13,7 @@ class  Task_6_20 {
         System.out.printf("number of letters: %d", numberOfLetters);
     }
 
-    static int countLetters(String s) {
+    private static int countLetters(String s) {
         int letterCount = 0;
 
         for (int i = 0; i < s.length(); i++) {

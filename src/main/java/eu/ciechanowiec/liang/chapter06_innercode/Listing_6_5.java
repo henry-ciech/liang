@@ -13,7 +13,7 @@ class Listing_6_5 {
         System.out.printf("Before invoking the swap method, num1 is %d and num2 is %d%n", num1, num2);
     }
 
-    static void swap(int n1, int n2) {
+    private static void swap(int n1, int n2) {
         System.out.println("\n\tInside the swap method");
         System.out.printf("Before swapping, n1 is %d and n is %d%n", n1, n2);
 

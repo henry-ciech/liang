@@ -13,7 +13,7 @@ class Task_6_25 {
         System.out.println("hours:minuties:seconds: " + convertMillis(millis));
     }
 
-    public static String convertMillis(long millis) {
+    private static String convertMillis(long millis) {
         millis /= 1000;
 
         String currentMinuteAndSecond = "";

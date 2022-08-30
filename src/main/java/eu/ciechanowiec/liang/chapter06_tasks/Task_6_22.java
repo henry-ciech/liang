@@ -13,7 +13,7 @@ class Task_6_22 {
         System.out.printf("The approximated square root of %.1f is: %d%n", sqrt(number), number );
     }
 
-    public static double sqrt(long n) {
+    private static double sqrt(long n) {
         long lastGuess = 1;
         long nextGuess = (lastGuess + n / lastGuess) / 2;
 

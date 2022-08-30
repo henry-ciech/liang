@@ -10,7 +10,7 @@ class Listing_6_2 {
         printGrade(59.5);
     }
 
-    static void printGrade(double score) {
+    private static void printGrade(double score) {
         if (score >= 90.0) {
             System.out.println('A');
         } else if (score >= 80.0) {

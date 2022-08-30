@@ -6,7 +6,7 @@ class Task_6_2 {
         System.out.println(sumDigit(25));
     }
 
-    static int sumDigit(int number) {
+    private static int sumDigit(int number) {
         int sum = 0;
 
         while (number > 0) {

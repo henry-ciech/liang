@@ -8,7 +8,7 @@ class Listing_6_3 {
         System.out.printf("The grade is %c%n", getGrade(59.5));
     }
 
-    static char getGrade(double score) {
+    private static char getGrade(double score) {
         if (score >= 90.0) {
             return 'A';
         } else if (score >= 80.0) {

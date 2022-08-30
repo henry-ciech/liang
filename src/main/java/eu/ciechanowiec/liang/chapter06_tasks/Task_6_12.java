@@ -7,8 +7,8 @@ class Task_6_12 {
         System.out.println();
     }
 
-    static void printChar(char ch1, char ch2, int numberPerLine) {
-        char ch3 = ' ';
+    private  static void printChar(char ch1, char ch2, int numberPerLine) {
+        char ch3;
         int count = 0;
 
         for (int i = ch1; i <= ch2; i++) {

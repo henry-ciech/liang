@@ -11,14 +11,14 @@ class Task_6_8 {
         }
     }
 
-    static double celsiusToFahrenheit(double celsius) {
+    private static double celsiusToFahrenheit(double celsius) {
         double fahrenheit;
         fahrenheit = (9.0 / 5) * celsius + 32;
 
         return fahrenheit;
     }
 
-    static double fahrenheitToCelsius(double fahrenheit) {
+    private static double fahrenheitToCelsius(double fahrenheit) {
         double celsius;
         celsius = (5.0 / 9) * (fahrenheit - 32);
 

@@ -10,7 +10,7 @@ class Task_6_14 {
         }
     }
 
-    static double calculatePi(int n) {
+    private static double calculatePi(int n) {
         double pi = 0;
 
         for (int i = 1; i <= n; i++) {

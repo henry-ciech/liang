@@ -13,10 +13,10 @@ class Task_6_4 {
         reverse(number);
     }
 
-    static void reverse(int number) {
+    private static void reverse(int number) {
         StringBuilder input = new StringBuilder();
 
-        input.append(String.valueOf(number));
+        input.append(number);
         input.reverse();
         System.out.printf("Reverse is %s", input);
     }

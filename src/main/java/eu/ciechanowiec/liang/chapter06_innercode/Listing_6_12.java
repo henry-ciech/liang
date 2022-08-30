@@ -18,20 +18,20 @@ class Listing_6_12 {
         printMonth(year, month);
     }
 
-    static void printMonth(int year, int month) {
+    private static void printMonth(int year, int month) {
         printMonthTitle(year, month);
 
         printMonthBody(year, month);
     }
 
-    static void printMonthTitle(int year, int month) {
+    private static void printMonthTitle(int year, int month) {
         System.out.println("         " + getMonthName(month)
                         + " " + year);
         System.out.println("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−");
         System.out.println(" Sun Mon Tue Wed Thu Fri Sat");
     }
 
-    static String getMonthName(int month) {
+    private static String getMonthName(int month) {
         switch (month) {
             case 1 -> {
                 return  "January";
@@ -75,7 +75,7 @@ class Listing_6_12 {
         }
     }
 
-    static void printMonthBody(int year, int month) {
+    private static void printMonthBody(int year, int month) {
         int startDay = getStartDay(year, month);
 
         int numberOfDaysIMonth = getTotalNumbersOfDaysInMonth(year, month);
@@ -94,13 +94,13 @@ class Listing_6_12 {
         }
     }
 
-    static int getStartDay(int year, int month) {
+    private static int getStartDay(int year, int month) {
         int totalNumberOfDays = getTotalNumbersOfDays(year, month);
 
         return (totalNumberOfDays + START_DAY_FOR_JAN_1_1800) % 7;
     }
 
-    static int getTotalNumbersOfDays(int year, int month) {
+    private static int getTotalNumbersOfDays(int year, int month) {
         int total = 0;
 
         for (int i = 1800; i < year; i++) {
@@ -118,7 +118,7 @@ class Listing_6_12 {
         return total;
     }
 
-    static int getTotalNumbersOfDaysInMonth(int year, int month) {
+    private static int getTotalNumbersOfDaysInMonth(int year, int month) {
         if (month == 1
         || month == 3
         || month == 5
@@ -140,7 +140,7 @@ class Listing_6_12 {
         return 0;
     }
 
-    static boolean isLeapYear(int year) {
+    private static boolean isLeapYear(int year) {
         return year % 400 == 0 || (year % 4 == 0 && year % 100 != 0);
     }
 }

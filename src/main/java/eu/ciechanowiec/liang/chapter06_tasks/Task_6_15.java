@@ -14,7 +14,7 @@ class Task_6_15 {
         }
     }
 
-    static void computeTax(int income) {
+    private static void computeTax(int income) {
         double tax1 = 0;
         double tax2 = 0;
         double tax3 = 0;

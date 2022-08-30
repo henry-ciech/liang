@@ -11,7 +11,7 @@ class Listing_6_7 {
 
     }
 
-    static void printPrimeNumbers(int numberOfPrime) {
+    private static void printPrimeNumbers(int numberOfPrime) {
         int count = 0;
         int number = 2;
 
@@ -30,7 +30,7 @@ class Listing_6_7 {
         }
     }
 
-    static boolean isPrime(int number) {
+    private static boolean isPrime(int number) {
         for (int divisor = 2; divisor <= number / 2; divisor++) {
             if (number % divisor == 0) {
                 return false;

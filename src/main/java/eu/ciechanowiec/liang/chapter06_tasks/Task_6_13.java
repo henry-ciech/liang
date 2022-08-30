@@ -10,7 +10,7 @@ class Task_6_13 {
         }
     }
 
-    static double countM(int n) {
+    private static double countM(int n) {
         double m = 0;
 
         for (double i = 1; i <= n; i++) {

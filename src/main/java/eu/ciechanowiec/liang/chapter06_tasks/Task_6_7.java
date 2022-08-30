@@ -22,7 +22,7 @@ class Task_6_7 {
         }
     }
 
-    public static double futureInvestmentValue(
+    private static double futureInvestmentValue(
         double investmentAmount, double monthlyInterestRate, int years) {
         return investmentAmount * Math.pow(1 + monthlyInterestRate, years * 12);
     }

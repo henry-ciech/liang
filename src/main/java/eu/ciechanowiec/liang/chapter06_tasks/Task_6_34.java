@@ -19,20 +19,20 @@ class Task_6_34 {
         System.out.println();
     }
 
-    static void printMonth(int year, int month) {
+    private static void printMonth(int year, int month) {
         printMonthTitle(year, month);
 
         printMonthBody(year, month);
     }
 
-    static void printMonthTitle(int year, int month) {
+    private static void printMonthTitle(int year, int month) {
         System.out.println("         " + getMonthName(month)
                 + " " + year);
         System.out.println("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−");
         System.out.println(" Sun Mon Tue Wed Thu Fri Sat");
     }
 
-    static String getMonthName(int month) {
+    private static String getMonthName(int month) {
         switch (month) {
             case 1 -> {
                 return  "January";
@@ -76,7 +76,7 @@ class Task_6_34 {
         }
     }
 
-    static void printMonthBody(int year, int month) {
+    private static void printMonthBody(int year, int month) {
         int startDay = getStartDay(year, month, 1);
 
         int numberOfDaysIMonth = getTotalNumbersOfDaysInMonth(year, month);
@@ -95,7 +95,7 @@ class Task_6_34 {
         }
     }
 
-    static int getStartDay(int year, int month, int day) {
+    private static int getStartDay(int year, int month, int day) {
 
         int yearDivide100 = year / 100;
         int century = year % 100;
@@ -103,25 +103,7 @@ class Task_6_34 {
         return (day + 26 * (month + 1) / 10 + century + century / 4 + yearDivide100 / 4 + 5 * yearDivide100) % 7;
     }
 
-    static int getTotalNumbersOfDays(int year, int month) {
-        int total = 0;
-
-        for (int i = 1800; i < year; i++) {
-            if (isLeapYear(i)) {
-                total += 366;
-            } else {
-                total += 365;
-            }
-        }
-
-        for (int i = 1; i < month; i++) {
-            total += getTotalNumbersOfDaysInMonth(year, i);
-        }
-
-        return total;
-    }
-
-    static int getTotalNumbersOfDaysInMonth(int year, int month) {
+    private static int getTotalNumbersOfDaysInMonth(int year, int month) {
         if (month == 1
                 || month == 3
                 || month == 5
@@ -143,7 +125,7 @@ class Task_6_34 {
         return 0;
     }
 
-    static boolean isLeapYear(int year) {
+    private static boolean isLeapYear(int year) {
         return year % 400 == 0 || (year % 4 == 0 && year % 100 != 0);
     }
 }

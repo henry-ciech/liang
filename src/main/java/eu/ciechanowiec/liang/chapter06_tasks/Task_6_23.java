@@ -16,7 +16,7 @@ class Task_6_23 {
         System.out.printf("Number of \"%c\": %d", ch1, count(input, ch1));
     }
 
-    static int count(String str, char a) {
+    private static int count(String str, char a) {
         int count = 0;
 
         for (int i = 0; i < str.length(); i++) {

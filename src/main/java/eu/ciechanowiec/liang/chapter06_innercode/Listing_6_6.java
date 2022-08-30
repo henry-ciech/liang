@@ -16,7 +16,7 @@ class Listing_6_6 {
         System.out.printf("The greatest common divisor for %d ans %d is %d%n", n1, n2, gcd(n1, n2));
     }
 
-    static int gcd(int n1, int n2){
+    private static int gcd(int n1, int n2){
         int gcd = 1;
         int k = 2;
 

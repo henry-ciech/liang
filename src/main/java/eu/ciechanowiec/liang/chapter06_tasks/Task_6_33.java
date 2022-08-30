@@ -31,7 +31,7 @@ class Task_6_33 {
                 month, today, currentYear, currentHour, currentMinute, currentSecond);
     }
 
-    public static int numberOfLeapYearsSince1970(long year) {
+    private static int numberOfLeapYearsSince1970(long year) {
         int count = 0;
         for (int i = 1970; i <= year; i++) {
             if (isLeapYear(i))count++;
@@ -40,17 +40,19 @@ class Task_6_33 {
         return count;
     }
 
-    public static int getMonthFromDays(int year, int days) {
+    private static int getMonthFromDays(int year, int days) {
         int dayTracker = 0;
         for (int i = 1; i <= 12; i++) {
             dayTracker += getNumberOfDaysInMonth(year, i);
-            if (dayTracker > days) return i;
+            if (dayTracker > days) {
+                return i;
+            }
         }
 
         return 12;
     }
 
-    public static int getNumOfDaysToReachThatMonth(int year, int month) {
+    private static int getNumOfDaysToReachThatMonth(int year, int month) {
         int dayTracker = 0;
         for (int i = 1; i < month; i++) {
             dayTracker += getNumberOfDaysInMonth(year, i);
@@ -59,21 +61,22 @@ class Task_6_33 {
         return dayTracker;
     }
 
-    public static int getStartDay(int year, int month) {
+    private static int getStartDay(int year, int month) {
         int startDay = 3;
         int totalNumberOfDays = getTotalNumberOfDays(year, month);
 
         return (totalNumberOfDays + startDay) % 7;
     }
 
-    public static int getTotalNumberOfDays(int year, int month) {
+    private static int getTotalNumberOfDays(int year, int month) {
         int total = 0;
 
         for (int i = 1800; i < year; i++) {
-            if (isLeapYear(i))
+            if (isLeapYear(i)) {
                 total = total + 366;
-            else
+            } else {
                 total = total + 365;
+            }
         }
 
         for (int i = 1; i < month; i++) {
@@ -83,7 +86,7 @@ class Task_6_33 {
         return total;
     }
 
-    public static int getNumberOfDaysInMonth(int year, int month) {
+    private static int getNumberOfDaysInMonth(int year, int month) {
 
         if (month == 1 || month == 3 || month == 5 || month == 7 ||
                 month == 8 || month == 10 || month == 12) {
@@ -101,11 +104,11 @@ class Task_6_33 {
         return 0;
     }
 
-    public static boolean isLeapYear(int year) {
+    private static boolean isLeapYear(int year) {
         return year % 400 == 0 || (year % 4 == 0 && year % 100 != 0);
     }
 
-    public static String getMonthName(int month) {
+    private static String getMonthName(int month) {
         switch (month) {
             case 1 -> {
                 return "January";

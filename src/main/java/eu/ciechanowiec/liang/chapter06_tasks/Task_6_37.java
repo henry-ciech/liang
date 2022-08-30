@@ -16,7 +16,7 @@ class Task_6_37 {
         System.out.println(format(number,width));
     }
 
-    static StringBuilder format(int number, int width) {
+    private static StringBuilder format(int number, int width) {
         StringBuilder numberStr = new StringBuilder(String.valueOf(number));
 
         for (int i = numberStr.length(); i < width; i++) {

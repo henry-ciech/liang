@@ -18,7 +18,7 @@ class Task_6_26 {
         }
     }
 
-    static boolean isPrime(int number) {
+    private static boolean isPrime(int number) {
         for (int divisor = 2; divisor <= number / 2; divisor++) {
             if (number % divisor == 0) {
                 return false;
@@ -28,10 +28,10 @@ class Task_6_26 {
         return true;
     }
 
-    static boolean isPalindrome(int number) {
+    private static boolean isPalindrome(int number) {
         StringBuilder input = new StringBuilder();
 
-        input.append(String.valueOf(number));
+        input.append(number);
         input.reverse();
 
         int reverseNumber = Integer.parseInt(String.valueOf(input));

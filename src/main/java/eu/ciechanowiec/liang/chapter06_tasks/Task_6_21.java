@@ -11,30 +11,33 @@ class Task_6_21 {
         String string = scanner.nextLine();
 
         for (int i = 0; i < string.length(); i++) {
-            if (Character.isLetter(string.charAt(i)))
+            if (Character.isLetter(string.charAt(i))) {
                 System.out.print(getNumber(Character.toUpperCase(string.charAt(i))));
-            else
+            } else {
                 System.out.print(string.charAt(i));
+            }
         }
+
         System.out.println();
     }
 
-    static int getNumber(char uppercaseLetter) {
-        if (uppercaseLetter >= 'W')
+    private static int getNumber(char uppercaseLetter) {
+        if (uppercaseLetter >= 'W') {
             return 9;
-        else if (uppercaseLetter >= 'T')
+        } else if (uppercaseLetter >= 'T') {
             return 8;
-        else if (uppercaseLetter >= 'P')
+        } else if (uppercaseLetter >= 'P') {
             return 7;
-        else if (uppercaseLetter >= 'M')
+        } else if (uppercaseLetter >= 'M') {
             return 6;
-        else if (uppercaseLetter >= 'J')
+        } else if (uppercaseLetter >= 'J') {
             return 5;
-        else if (uppercaseLetter >= 'G')
+        } else if (uppercaseLetter >= 'G') {
             return 4;
-        else if (uppercaseLetter >= 'D')
+        } else if (uppercaseLetter >= 'D') {
             return 3;
-        else
+        } else {
             return 2;
+        }
     }
 }
