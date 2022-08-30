@@ -6,28 +6,25 @@ class Task_5_38 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int digit = 0;
 
-        System.out.println("Enter the number:");
-        int number  = scanner.nextInt();
+        System.out.println("Enter number:");
+        int number = scanner.nextInt();
 
-        String hex = "";
+        System.out.printf("%nOctal Value: %d%n", convertToOctal(number));
+    }
 
-        while (number > 0) {
-            digit = number % 16;
+    private static int convertToOctal(int decimalNumber) {
+        int octalNumber = 0;
+        int countValue = 1;
+        while (decimalNumber != 0) {
+            int remainder = decimalNumber % 8;
 
-            switch (digit) {
-                case 15 -> hex = "F" + hex;
-                case 14 -> hex = "E" + hex;
-                case 13 -> hex = "D" + hex;
-                case 12 -> hex = "C" + hex;
-                case 11 -> hex = "B" + hex;
-                case 10 -> hex = "A" + hex;
-                default -> hex = digit + hex;
-            }
+            octalNumber += remainder * countValue;
 
-            number /= 16;
+            countValue = countValue * 10;
+            decimalNumber /= 8;
         }
-        System.out.println(hex);
+
+        return octalNumber;
     }
 }

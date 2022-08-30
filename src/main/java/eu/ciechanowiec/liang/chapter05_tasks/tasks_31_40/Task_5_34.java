@@ -9,9 +9,10 @@ class Task_5_34 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         RandomGenerator random = new Random();
-        int count = 0;
+        int userCount = 0;
+        int computerCount = 0;
 
-        while (count <= 2) {
+        while (Math.max(computerCount, userCount) - Math.min(computerCount, userCount) <= 2) {
             int number = random.nextInt(2);
             System.out.println("""
                     Choose:
@@ -27,31 +28,34 @@ class Task_5_34 {
                 System.out.println("Draw");
             } else if (choose == 0 && number == 1) {
                 System.out.println("You lose");
-                count++;
+                computerCount++;
             } else if (choose == 0 && number == 2) {
                 System.out.println("You win");
-                count++;
+                userCount++;
             } else if (choose == 1 && number == 0) {
                 System.out.println("You win");
-                count++;
+                userCount++;
             } else if (choose == 1 && number == 1) {
                 System.out.println("Draw");
             } else if (choose == 1 && number == 2) {
                 System.out.println("you lose");
-                count++;
+                computerCount++;
             } else if (choose == 2 && number == 0) {
                 System.out.println("You lose");
-                count++;
+                computerCount++;
             } else if (choose == 2 && number == 1) {
                 System.out.println("You  win");
-                count++;
+                userCount++;
             } else if (choose == 2 && number == 2) {
                 System.out.println("Draw");
             } else {
                 System.out.println("Invalid input");
             }
 
-            System.out.printf("win/lose count: %d%n%n", count);
+            System.out.printf("""
+                    User win-count: %d
+                    Computer win-count: %d%n
+                    """, userCount, computerCount);
         }
     }
 }

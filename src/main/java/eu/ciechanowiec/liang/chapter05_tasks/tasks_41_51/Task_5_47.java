@@ -10,6 +10,10 @@ class Task_5_47 {
         System.out.println("Enter the first 12 digits of an ISBN-13 as integers:"); //978013213080 or 978013213079
         String number = scanner.nextLine();
 
+        if (number.length() < 12) {
+            throw new RuntimeException("Invalid input");
+        }
+
         for (int i = 0; i < 12; i++) {
             if ((i + 1) % 2 == 0) {
                 checksum += (number.charAt(i) - '0') * 3;
