@@ -4,12 +4,10 @@ import java.util.Scanner;
 
 class Task_6_34 {
 
-    private static final int START_DAY_FOR_JAN_1_1800 = 3;
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter ful year (e.g., 2012):");
+        System.out.println("Enter full year (e.g., 2012):");
         int year = scanner.nextInt();
 
         System.out.println("Enter Month as a number between 1 and 12:");
@@ -26,8 +24,7 @@ class Task_6_34 {
     }
 
     private static void printMonthTitle(int year, int month) {
-        System.out.println("         " + getMonthName(month)
-                + " " + year);
+        System.out.printf("%s %d%n", getMonthName(month), year);
         System.out.println("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−");
         System.out.println(" Sun Mon Tue Wed Thu Fri Sat");
     }
@@ -80,13 +77,11 @@ class Task_6_34 {
         int startDay = getStartDay(year, month, 1);
 
         int numberOfDaysIMonth = getTotalNumbersOfDaysInMonth(year, month);
-
-        int i = 0;
-        for(i = 0; i < startDay; i++) {
+        for(int i = 0; i < startDay; i++) {
             System.out.println("\t");
         }
 
-        for (i = 1; i <= numberOfDaysIMonth; i++) {
+        for (int i = 1; i <= numberOfDaysIMonth; i++) {
             System.out.printf("%4d", i);
 
             if ((i + startDay) % 7 == 0) {

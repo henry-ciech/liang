@@ -10,14 +10,14 @@ class  Task_6_20 {
         System.out.println("Enter a string:");
         int numberOfLetters = countLetters(scanner.nextLine());
 
-        System.out.printf("number of letters: %d", numberOfLetters);
+        System.out.printf("Number of letters: %d%n", numberOfLetters);
     }
 
-    private static int countLetters(String s) {
+    private static int countLetters(CharSequence input) {
         int letterCount = 0;
 
-        for (int i = 0; i < s.length(); i++) {
-            if (Character.isLetter(s.charAt(i))) {
+        for (int i = 0; i < input.length(); i++) {
+            if (Character.isLetter(input.charAt(i))) {
                 letterCount++;
             }
         }

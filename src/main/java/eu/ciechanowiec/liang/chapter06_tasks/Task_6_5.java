@@ -29,6 +29,6 @@ class Task_6_5 {
         min = Math.min(num1, Math.min(num2, num3));
         mid = sum - max - min;
 
-        System.out.printf("increasing order: %.1f %.1f %.1f%n", min, mid, max);
+        System.out.printf("Increasing order: %n%.1f%n%.1f%n%.1f%n", min, mid, max);
     }
 }

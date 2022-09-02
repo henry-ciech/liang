@@ -4,7 +4,7 @@ class Task_6_10 {
 
     public static void main(String[] args) {
         for (int i = 1; i <= 10000; i++) {
-            if(isPrime(i)) {
+            if (isPrime(i)) {
                 System.out.println(i);
             }
         }

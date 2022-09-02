@@ -18,6 +18,6 @@ class Task_6_4 {
 
         input.append(number);
         input.reverse();
-        System.out.printf("Reverse is %s", input);
+        System.out.printf("Reverse is %s%n", input);
     }
 }

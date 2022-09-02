@@ -5,13 +5,13 @@ class Task_6_33 {
     public static void main(String[] args) {
         long totalMilliseconds = System.currentTimeMillis();
         long totalSeconds = totalMilliseconds / 1000;
-        long currentSecond = (int)(totalSeconds % 60);
+        long currentSecond = (int) (totalSeconds % 60);
         long totalMinutes = totalSeconds / 60;
-        long currentMinute = (int)(totalMinutes % 60);
+        long currentMinute = (int) (totalMinutes % 60);
         long totalHours = totalMinutes / 60;
-        long currentHour = (int)(totalHours % 24);
+        long currentHour = (int) (totalHours % 24);
         long totalDays = totalHours / 24;
-        int currentYear = (int)(totalDays / 365) + 1970;
+        int currentYear = (int) (totalDays / 365) + 1970;
 
         long daysInCurrentYear = (totalDays - numberOfLeapYearsSince1970(currentYear)) % 365;
 
@@ -61,33 +61,7 @@ class Task_6_33 {
         return dayTracker;
     }
 
-    private static int getStartDay(int year, int month) {
-        int startDay = 3;
-        int totalNumberOfDays = getTotalNumberOfDays(year, month);
-
-        return (totalNumberOfDays + startDay) % 7;
-    }
-
-    private static int getTotalNumberOfDays(int year, int month) {
-        int total = 0;
-
-        for (int i = 1800; i < year; i++) {
-            if (isLeapYear(i)) {
-                total = total + 366;
-            } else {
-                total = total + 365;
-            }
-        }
-
-        for (int i = 1; i < month; i++) {
-            total = total + getNumberOfDaysInMonth(year, i);
-        }
-
-        return total;
-    }
-
     private static int getNumberOfDaysInMonth(int year, int month) {
-
         if (month == 1 || month == 3 || month == 5 || month == 7 ||
                 month == 8 || month == 10 || month == 12) {
             return 31;
@@ -97,7 +71,7 @@ class Task_6_33 {
             return 30;
         }
 
-        if (month == 2){
+        if (month == 2) {
             return isLeapYear(year) ? 29 : 28;
         }
 

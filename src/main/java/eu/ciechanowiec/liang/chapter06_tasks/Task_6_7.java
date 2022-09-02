@@ -18,7 +18,7 @@ class Task_6_7 {
         System.out.println("Years     Future Value");
         for (int years = 1; years <= NUMBER_OF_YEARS; years++) {
             System.out.printf("%-10d", years);
-            System.out.printf("%11.2f\n", futureInvestmentValue(amount, monthlyInterestRate, years));
+            System.out.printf("%11.2f%n", futureInvestmentValue(amount, monthlyInterestRate, years));
         }
     }
 

@@ -15,16 +15,16 @@ class Task_6_31 {
 
      private static boolean isValid(long number) {
         return (getSize(number) >= 13 && getSize(number) <= 16) &&
-                        (prefixMatched(number, 4) || prefixMatched(number, 5) ||
-                         prefixMatched(number, 37) || prefixMatched(number, 6)) &&
+                        (isPrefixMatched(number, 4) || isPrefixMatched(number, 5) ||
+                         isPrefixMatched(number, 37) || isPrefixMatched(number, 6)) &&
                        ((sumOfDoubleEvenPlace(number) + sumOfOddPlace(number)) % 10 == 0);
     }
 
     private static int sumOfDoubleEvenPlace(long number) {
         int sum = 0;
-        String num = number + "";
+        String num = String.valueOf(number);
         for (int i = getSize(number) - 2; i >= 0; i -= 2) {
-            sum += getDigit(Integer.parseInt(num.charAt(i) + "") * 2);
+            sum += getDigit(Integer.parseInt(String.valueOf(num.charAt(i))) * 2);
         }
 
         return sum;
@@ -40,25 +40,25 @@ class Task_6_31 {
 
     private static int sumOfOddPlace(long number) {
         int sum = 0;
-        String num = number + "";
+        String num = String.valueOf(number);
         for (int i = getSize(number) - 1; i >= 0; i -= 2) {
-            sum += Integer.parseInt(num.charAt(i) + "");
+            sum += Integer.parseInt(String.valueOf(num.charAt(i)));
         }
         return sum;
     }
 
-    private static boolean prefixMatched(long number, int d) {
+    private static boolean isPrefixMatched(long number, int d) {
         return getPrefix(number, getSize(d)) == d;
     }
 
     private static int getSize(long d) {
-        String num = d + "";
+        String num = String.valueOf(d);
         return num.length();
     }
 
     private static long getPrefix(long number, int k) {
         if (getSize(number) > k) {
-            String num = number + "";
+            String num = String.valueOf(number);
             return  Long.parseLong(num.substring(0, k));
         }
 

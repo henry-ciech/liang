@@ -7,13 +7,13 @@ class Task_6_19 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter side1:");
+        System.out.println("Enter side 1:");
         double side1 = scanner.nextDouble();
 
-        System.out.println("Enter side2:");
+        System.out.println("Enter side 2:");
         double side2 = scanner.nextDouble();
 
-        System.out.println("Enter side3:");
+        System.out.println("Enter side 3:");
         double side3 = scanner.nextDouble();
 
         if (isValid(side1, side2, side3)) {
@@ -23,11 +23,9 @@ class Task_6_19 {
         }
     }
 
-
     private static boolean isValid(double side1, double side2, double side3) {
         return side1 + side2 > side3 && side1 + side3 > side2 && side2 + side3 > side1;
     }
-
 
     private static double computeArea(double side1, double side2, double side3) {
         double halfPerimeter = (side1 + side2 + side3) / 2;

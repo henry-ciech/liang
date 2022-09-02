@@ -13,7 +13,7 @@ class Task_6_36 {
         System.out.println("Enter the side:");
         double side = scanner.nextDouble();
 
-        System.out.printf("Area: %.1f", area(numberOfSides, side));
+        System.out.printf("Area: %.1f%n", area(numberOfSides, side));
     }
 
     private static double area(int n, double side) {

@@ -6,15 +6,15 @@ class Task_6_28 {
         System.out.println("p\t\t2^p-1");
         System.out.println("-------------------");
 
-        for(int p = 1; p <= 31; p++) {
+        for (int p = 1; p <= 31; p++) {
             if (isPrime(p)) {
                 System.out.printf("%-7d %d%n", p, mersennePrime(p));
             }
         }
     }
 
-    private static int mersennePrime(int p) {
-        return (int) (Math.pow(2, p) - 1);
+    private static int mersennePrime(int number) {
+        return (int) (Math.pow(2, number) - 1);
     }
 
     private static boolean isPrime(int number) {

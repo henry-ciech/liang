@@ -2,8 +2,6 @@ package eu.ciechanowiec.liang.chapter06_tasks;
 
 class Task_6_11 {
 
-    private static final double COMMISSION_SOUGHT = 100000;
-
     public static void main(String[] args) {
         System.out.println("Sales Amount\t\tCommission");
 

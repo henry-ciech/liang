@@ -10,7 +10,7 @@ class Task_6_25 {
         System.out.println("Enter milliseconds: ");
         long millis = input.nextLong();
 
-        System.out.println("hours:minuties:seconds: " + convertMillis(millis));
+        System.out.println("hours:minutes:seconds: " + convertMillis(millis));
     }
 
     private static String convertMillis(long millis) {

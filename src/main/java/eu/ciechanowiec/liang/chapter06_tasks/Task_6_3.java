@@ -10,7 +10,7 @@ class Task_6_3 {
     private static int reverse(int number) {
         StringBuilder input = new StringBuilder();
 
-        input.append(String.valueOf(number));
+        input.append(number);
         input.reverse();
 
         return Integer.parseInt(String.valueOf(input));
@@ -19,7 +19,7 @@ class Task_6_3 {
     private static boolean isPalindrome(int number) {
         StringBuilder input = new StringBuilder();
 
-        input.append(String.valueOf(number));
+        input.append(number);
         input.reverse();
 
         int reverseNumber = Integer.parseInt(String.valueOf(input));

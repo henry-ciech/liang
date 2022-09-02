@@ -9,7 +9,8 @@ public class Task_4_9 {
 
         System.out.println("Enter a character:");
         char ch = scanner.nextLine().charAt(0);
+        String s = Character.toString((char)ch);
 
-        System.out.println("The ASCII for the character " + ch + " is " + (int) ch);
+        System.out.println("The ASCII for the character " + ch + " is " + s);
     }
 }

@@ -13,40 +13,45 @@ class Task_5_34 {
         int computerCount = 0;
 
         while (Math.max(computerCount, userCount) - Math.min(computerCount, userCount) <= 2) {
-            int number = random.nextInt(2);
+            int number = random.nextInt(3);
             System.out.println("""
                     Choose:
                     0 - scissors
                     1 - rock
                     2 - paper
                     """);
-            int choose = Integer.parseInt(scanner.nextLine());
+            int userChoice = Integer.parseInt(scanner.nextLine());
 
-            System.out.printf("computer choose: %d%n", number);
+            String computerChoice = (number == 0)? "scissors" : (number == 1)? "rock" : "paper";
 
-            if (choose == 0 && number == 0) {
+            String userChoiceString = (userChoice == 0)? "scissors" : (userChoice == 1)? "rock" : "paper";
+
+            System.out.printf("Computer choice: %d (%s)%n", number, computerChoice);
+            System.out.printf("Your choice: %d (%s)%n", userChoice, userChoiceString);
+
+            if (userChoice == 0 && number == 0) {
                 System.out.println("Draw");
-            } else if (choose == 0 && number == 1) {
-                System.out.println("You lose");
+            } else if (userChoice == 0 && number == 1) {
+                System.out.println("You lost");
                 computerCount++;
-            } else if (choose == 0 && number == 2) {
-                System.out.println("You win");
+            } else if (userChoice == 0 && number == 2) {
+                System.out.println("You won");
                 userCount++;
-            } else if (choose == 1 && number == 0) {
-                System.out.println("You win");
+            } else if (userChoice == 1 && number == 0) {
+                System.out.println("You won");
                 userCount++;
-            } else if (choose == 1 && number == 1) {
+            } else if (userChoice == 1 && number == 1) {
                 System.out.println("Draw");
-            } else if (choose == 1 && number == 2) {
-                System.out.println("you lose");
+            } else if (userChoice == 1 && number == 2) {
+                System.out.println("you lost");
                 computerCount++;
-            } else if (choose == 2 && number == 0) {
-                System.out.println("You lose");
+            } else if (userChoice == 2 && number == 0) {
+                System.out.println("You lost");
                 computerCount++;
-            } else if (choose == 2 && number == 1) {
-                System.out.println("You  win");
+            } else if (userChoice == 2 && number == 1) {
+                System.out.println("You  won");
                 userCount++;
-            } else if (choose == 2 && number == 2) {
+            } else if (userChoice == 2 && number == 2) {
                 System.out.println("Draw");
             } else {
                 System.out.println("Invalid input");

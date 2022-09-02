@@ -11,9 +11,9 @@ class Task_6_23 {
         String input = scanner.nextLine();
 
         System.out.println("Enter char:");
-        char ch1 = scanner.nextLine().charAt(0);
+        char searchedChar = scanner.nextLine().charAt(0);
 
-        System.out.printf("Number of \"%c\": %d", ch1, count(input, ch1));
+        System.out.printf("Number of \"%c\": %d%n", searchedChar, count(input, searchedChar));
     }
 
     private static int count(String str, char a) {

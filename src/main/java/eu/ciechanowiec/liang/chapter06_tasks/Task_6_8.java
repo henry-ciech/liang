@@ -7,7 +7,7 @@ class Task_6_8 {
         System.out.println("-------------------------------------------------");
 
         for (double i = 40, j = 120; j >= 30; i--, j -= 10) {
-            System.out.printf("%-12.1f%-11.1f|%13.1f %11.1f%n", i, celsiusToFahrenheit(i), j, fahrenheitToCelsius(j) );
+            System.out.printf("%-12.1f%-12.1f|%12.1f%12.1f%n", i, celsiusToFahrenheit(i), j, fahrenheitToCelsius(j) );
         }
     }
 

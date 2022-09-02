@@ -25,7 +25,7 @@ class Task_6_30 {
             System.out.printf("You rolled %d + %d = %d%n", dice1, dice2, sum);
 
             if (sum == winValue1 || sum == winValue2) {
-                System.out.println("You win");
+                System.out.println("You won");
                 break;
             }
 
@@ -33,7 +33,7 @@ class Task_6_30 {
                     || sum == loseValue2
                     || sum == loseValue3
                     || sum == loseValue4) {
-                System.out.println("You lose");
+                System.out.println("You lost");
                 break;
             } else {
                 System.out.printf("Point is %d%n", sum);
