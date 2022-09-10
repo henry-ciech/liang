@@ -6,7 +6,7 @@ class Listing_6_10 {
         return (char)(ch1 + Math.random() * (ch2 - ch1 + 1));
     }
 
-    static char getRandomLowerCaseLetter() {
+    public static char getRandomLowerCaseLetter() {
         return getRandomCharacter('a', 'z');
     }
 

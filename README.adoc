@@ -18,3 +18,7 @@ Here you can find my solution of Liang Java Tutorial tasks and inner codes for e
 [upperalpha]
 . Task 3_28
 . Task 4_9
+. Task 7_32
+. Task 7_35
+. Task 7_36
+. Task 7_37
