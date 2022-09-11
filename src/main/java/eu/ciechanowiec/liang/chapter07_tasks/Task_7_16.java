@@ -8,6 +8,7 @@ import java.util.Random;
 import java.util.random.RandomGenerator;
 
 class Task_7_16 {
+
     public static void main(String[] args) {
         double startTime = System.currentTimeMillis();
         RandomGenerator random = new Random();

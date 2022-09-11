@@ -24,7 +24,7 @@ class Task_7_15 {
         System.out.println();
     }
 
-    public static int[] eliminateDuplicates(int[] list) {
+    private static int[] eliminateDuplicates(int[] list) {
         int[] distinctList = new int[list.length];
         int i = 0;
         for (int e: list) {
@@ -36,7 +36,7 @@ class Task_7_15 {
         return distinctList;
     }
 
-    public static int linearSearch(int[] array, int key) {
+    private static int linearSearch(int[] array, int key) {
         for (int i = 0; i < array.length; i++) {
             if (key == array[i]) {
                 return i;

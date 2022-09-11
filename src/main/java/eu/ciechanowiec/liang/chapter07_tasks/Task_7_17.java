@@ -3,6 +3,7 @@ package eu.ciechanowiec.liang.chapter07_tasks;
 import java.util.Scanner;
 
 class Task_7_17 {
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -25,7 +26,7 @@ class Task_7_17 {
         }
     }
 
-    public static void sortDecreasing(String[] studentsNames, int[] studentScores) {
+    private static void sortDecreasing(String[] studentsNames, int[] studentScores) {
         for (int i = 0; i < studentScores.length; i++) {
             int max = studentScores[i];
             int maxIndex = i;

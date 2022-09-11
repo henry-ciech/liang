@@ -17,7 +17,7 @@ class Task_7_3 {
         }
     }
 
-    public static void count(int[] counts){
+    private static void count(int[] counts){
         Scanner scanner = new Scanner(System.in);
         int num;
 
