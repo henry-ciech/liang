@@ -35,6 +35,7 @@ class Task_7_34 {
                 str[i] =  min;
             }
         }
+
         return str;
     }
 }
