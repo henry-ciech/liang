@@ -8,19 +8,25 @@ class Task_7_19 {
         Scanner scanner = new Scanner(System.in);
         int size;
 
-        System.out.println("First number is size of list");
-        System.out.println("Enter list:");
+        System.out.println("List size:");
         size = scanner.nextInt();
         int[] numbers = new int[size];
+        System.out.println("Enter list:");
 
         for (int i = 0; i < size; i++) {
             numbers[i] = scanner.nextInt();
         }
 
+
+        System.out.printf("The list has %d integers: ", size);
+        for (int number : numbers) {
+            System.out.printf("%d ", number);
+        }
+
         if (isSorted(numbers)) {
-            System.out.println("The list is already sorted.");
+            System.out.println("\nThe list is already sorted");
         } else {
-            System.out.println("The list is not sorted.");
+            System.out.println("\nThe list is not sorted");
         }
     }
 

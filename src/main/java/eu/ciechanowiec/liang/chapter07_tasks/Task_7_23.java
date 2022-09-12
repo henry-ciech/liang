@@ -19,7 +19,6 @@ class Task_7_23 {
         }
     }
 
-
     private static void display(boolean[] lockers) {
         int lockerCount = 0;
         for (int i = 0; i < lockers.length; i++) {

@@ -20,7 +20,7 @@ class Task_7_24 {
 
         print(picks);
 
-        System.out.printf("Number of picks: %d", count);
+        System.out.printf("Number of picks: %d%n", count);
     }
 
     private static void shuffleCards(int[] deck) {
@@ -39,7 +39,7 @@ class Task_7_24 {
     }
 
     private static int pickCards(int[] deck) {
-        return (int)(Math.random() * deck.length);
+        return (int) (Math.random() * deck.length);
     }
 
     private static boolean isOneOFEachSuit(int[] picks) {

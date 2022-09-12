@@ -14,13 +14,8 @@ class Task_7_2 {
             numbers[i] = scanner.nextInt();
         }
 
-        for (int number : numbers) {
-            StringBuilder reverse = new StringBuilder();
-            reverse.append(number);
-
-            reverse.reverse();
-
-            System.out.printf("%s ", reverse);
+        for (int i = numbers.length - 1; i >= 0; i--) {
+            System.out.printf("%d ", numbers[i]);
         }
 
         System.out.println();

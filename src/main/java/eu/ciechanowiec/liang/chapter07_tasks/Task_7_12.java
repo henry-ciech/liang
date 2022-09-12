@@ -13,23 +13,16 @@ class Task_7_12 {
             numbers[i] = scanner.nextInt();
         }
 
-        reverse(numbers);
-
         System.out.println("Reverse: ");
-        for (int number : numbers) {
-            System.out.printf("%d ", number);
-        }
+        reverse(numbers);
 
         System.out.println();
     }
 
     private static void reverse(int[] numbers) {
 
-        for (int i = 0; i < numbers.length; i++) {
-            StringBuilder input = new StringBuilder();
-            input.append(numbers[i]);
-            input.reverse();
-            numbers[i] = Integer.parseInt(String.valueOf(input));
+        for (int i = numbers.length - 1; i >= 0; i--) {
+            System.out.printf("%d ", numbers[i]);
         }
     }
 }

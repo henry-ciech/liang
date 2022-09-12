@@ -13,11 +13,11 @@ class Task_7_34 {
         System.out.println(sort(string));
     }
 
-    private static char[] sort(String s) {
-        char[] str = new char[s.length()];
+    private static char[] sort(String input) {
+        char[] str = new char[input.length()];
 
         for (int i = 0; i < str.length; i++) {
-            str[i] = s.charAt(i);
+            str[i] = input.charAt(i);
         }
 
         for (int i = 0; i < str.length - 1; i++) {

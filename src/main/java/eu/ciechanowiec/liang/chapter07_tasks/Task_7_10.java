@@ -26,7 +26,7 @@ class Task_7_10 {
                 break;
             }
         }
-        return minIndex + 1;
+        return minIndex;
     }
 
     private static double min(double[] array) {

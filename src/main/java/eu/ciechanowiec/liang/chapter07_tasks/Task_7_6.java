@@ -26,7 +26,6 @@ class Task_7_6 {
     }
 
     private static void printArray(int[] array, int numberPerLine) {
-
         for (int i = 0; i < array.length; i++) {
             System.out.printf("%10d ", array[i]);
             if ((i + 1) % numberPerLine == 0) {

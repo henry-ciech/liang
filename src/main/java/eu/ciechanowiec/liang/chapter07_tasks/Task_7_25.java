@@ -3,6 +3,7 @@ package eu.ciechanowiec.liang.chapter07_tasks;
 import java.util.Scanner;
 
 class Task_7_25 {
+    
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         double[] eqn = new double[3];

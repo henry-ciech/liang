@@ -47,7 +47,7 @@ class Task_7_4 {
                     Average: %d
                     Numbers above average: %d
                     Numbers below average: %d
-                    Numbers equal average: %d%n
+                    Numbers equal average: %d
                     """, average, countAboveAverage, countBelowAverage, countEqualAverage);
         }
     }

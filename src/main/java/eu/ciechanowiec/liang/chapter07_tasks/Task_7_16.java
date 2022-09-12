@@ -10,7 +10,6 @@ import java.util.random.RandomGenerator;
 class Task_7_16 {
 
     public static void main(String[] args) {
-        double startTime = System.currentTimeMillis();
         RandomGenerator random = new Random();
         int[] numbers = new int[100_000];
         int number;
@@ -21,14 +20,22 @@ class Task_7_16 {
             numbers[i] = number;
         }
 
+
+        double startTimeLinerSearch = System.currentTimeMillis();
         Listing_7_6.linearSearch(numbers, key);
+        double endTimeLinerSearch = System.currentTimeMillis();
 
         Arrays.sort(numbers);
-
+        double startTimeBinarySearch = System.currentTimeMillis();
         Listing_7_7.binarySearch(numbers, key);
-        double endTime = System.currentTimeMillis();
-        double executiveTime = (endTime - startTime) / 1000;
+        double endTimeBinarySearch = System.currentTimeMillis();
 
-        System.out.printf("Executive time in seconds: %.3f%n", executiveTime);
+        double executiveTimeLinerSearch = (endTimeLinerSearch - startTimeLinerSearch) / 1000;
+        double executiveTimeBinarySearch = (endTimeBinarySearch - startTimeBinarySearch) / 1000;
+
+        System.out.printf("""
+               Executive time of liner search in seconds: %.3f
+               Executive time of binary search in seconds: %.3f
+               """, executiveTimeLinerSearch, executiveTimeBinarySearch);
     }
 }
