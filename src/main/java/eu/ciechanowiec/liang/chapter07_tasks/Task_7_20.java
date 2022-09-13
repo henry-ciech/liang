@@ -19,28 +19,25 @@ class Task_7_20 {
     }
 
     private static void selectionSort(double[] numbers) {
-        for (int i = numbers.length - 1; i > 1 ; i--) {
-            int currentIndex = i;
-            double currentHigh = numbers[i];
+        double max = numbers[0];
+        int maxIndex = 0;
+        double temp = 0;
 
-            for (int k = i - 1; k > 0; k--) {
-                if (currentHigh < numbers[k]) {
-                    currentIndex = k;
-                    currentHigh = numbers[k];
-                }
-            }
-
-            if (currentIndex != i) {
-                double temp = numbers[currentIndex];
-                numbers[currentIndex] = numbers[i];
-                numbers[i] = temp;
+        for (int i = 1; i < numbers.length; i++) {
+            if (numbers[i] > max) {
+                max = numbers[i];
+                maxIndex = i;
             }
         }
+
+        temp = numbers[numbers.length - 1];
+        numbers[numbers.length - 1] = max;
+        numbers[maxIndex] = temp;
     }
 
     private static void printArray(double[] array, int numberPerLine) {
         for (int i = 0; i < array.length; i++) {
-            System.out.printf("%5.2f ", array[i]);
+            System.out.printf("%.1f ", array[i]);
             if ((i + 1) % numberPerLine == 0) {
                 System.out.println();
             }
