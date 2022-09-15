@@ -33,8 +33,8 @@ class Task_7_35 {
             while (Arrays.asList(wordToGuess).contains("*")) {
                 System.out.print("Enter a letter in word ");
                 printArray(wordToGuess);
-                printArray(guessingWord);
                 letterGuess = scanner.nextLine();
+
                 if (!Arrays.asList(wordToGuess).contains(letterGuess)) {
                     for (int i = 0; i < wordToGuess.length; i++) {
                         if (letterGuess.equals(guessingWord[i])) {
@@ -46,11 +46,14 @@ class Task_7_35 {
                         System.out.printf("%s is not in the list%n", letterGuess);
                         count++;
                     }
+
                 } else if (Arrays.asList(wordToGuess).contains(letterGuess)) {
                     System.out.printf("%s is already in the list%n", letterGuess);
                 }
+
                 System.out.println();
             }
+
             System.out.printf("The word is %s mistakes: %d%n", guessWord, count);
             System.out.println("Do you want to guess another word? Enter y or n");
             oneMoreGame = scanner.nextLine();
