@@ -30,24 +30,24 @@ class Task_7_35 {
             }
             Arrays.fill(wordToGuess, "*");
 
-            while (Arrays.asList(wordToGuess).contains("*")) {
+            while (ifContains(wordToGuess, "*")) {
                 System.out.print("Enter a letter in word ");
                 printArray(wordToGuess);
                 letterGuess = scanner.nextLine();
 
-                if (!Arrays.asList(wordToGuess).contains(letterGuess)) {
+                if (!ifContains(wordToGuess, letterGuess)) {
                     for (int i = 0; i < wordToGuess.length; i++) {
                         if (letterGuess.equals(guessingWord[i])) {
                             wordToGuess[i] = letterGuess;
                         }
                     }
 
-                    if (!Arrays.asList(wordToGuess).contains(letterGuess)) {
+                    if (!ifContains(wordToGuess, letterGuess)) {
                         System.out.printf("%s is not in the list%n", letterGuess);
                         count++;
                     }
 
-                } else if (Arrays.asList(wordToGuess).contains(letterGuess)) {
+                } else if (ifContains(wordToGuess, letterGuess)) {
                     System.out.printf("%s is already in the list%n", letterGuess);
                 }
 
@@ -65,5 +65,9 @@ class Task_7_35 {
             System.out.print(letter);
         }
         System.out.printf(":%n");
+    }
+
+    private static boolean ifContains(String[] array, String valueToContain) {
+        return Arrays.asList(array).contains(valueToContain);
     }
 }
