@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 class Task_8_33 {
 
-    static final int X = 0;
-    static final int Y = 1;
+    private static final int X = 0;
+    private static final int Y = 1;
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -32,9 +32,10 @@ class Task_8_33 {
 
         sort(area);
         System.out.print("The areas are ");
-        for (int i = 0; i < area.length; i++) {
-            System.out.printf("%2.2f ", area[i]);
+        for (double v : area) {
+            System.out.printf("%2.2f ", v);
         }
+        System.out.println();
     }
 
     private static void sort(double[] list) {
@@ -74,8 +75,6 @@ class Task_8_33 {
     }
 
     private static double[][] findTwoFurthestPoints(double[][] points) {
-        int index1 = 0;
-        int index2 = 0;
 
         double[][] p = new double[2][2];
         double distance = 0;
@@ -119,15 +118,15 @@ class Task_8_33 {
 
 
     private static double[][] exclude(double[][] points, double[][] exclude) {
-        double[][] p = new double[2][2];
+        double[][] doubles = new double[2][2];
         for (int i = 0; i < points.length - 1; i++) {
             for (int j = 1 + i; j < points.length; j++) {
                 if (exclude[0] != points[i] && exclude[1] != points[j]) {
-                    p[0] = points[i];
-                    p[1] = points[j];
+                    doubles[0] = points[i];
+                    doubles[1] = points[j];
                 }
             }
         }
-        return new double[][] {p[0],p[1]};
+        return new double[][] {doubles[0],doubles[1]};
     }
 }

@@ -7,22 +7,21 @@ class Task_8_20 {
 
     public static void main(String[] args) {
         String[][] matrix = new String[6][7];
-        for (int i = 0; i < matrix.length; i++) {
-            Arrays.fill(matrix[i], "O");
+        for (String[] strings : matrix) {
+            Arrays.fill(strings, "O");
         }
         ask(matrix);
         print(matrix);
     }
 
     private static void print(String[][] matrix) {
-        for (int i = 0; i < matrix.length; i++) {
-            System.out.println();
+        for (String[] strings : matrix) {
             System.out.print("|");
-            for (int j = 0; j < matrix[i].length; j++) {
-                if (matrix[i][j].equalsIgnoreCase("O")) {
+            for (String string : strings) {
+                if (string.equalsIgnoreCase("O")) {
                     System.out.print(" |");
                 } else {
-                    System.out.printf("%s|", matrix[i][j]);
+                    System.out.printf("%s|", string);
                 }
             }
             System.out.println();

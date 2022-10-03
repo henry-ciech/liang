@@ -2,7 +2,7 @@ package eu.ciechanowiec.liang.chapter08_tasks;
 
 import java.util.Scanner;
 
-class Таск_8_37 {
+class Task_8_37 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -21,7 +21,7 @@ class Таск_8_37 {
                 {"Michigan", "Lansing"}, {"Minnesota", "Saint Paul"},
                 {"Mississippi", "Jackson"}, {"Missouri", "Jefferson City"},
                 {"Montana", "Helena"}, {"Nebraska", "Lincoln"},
-                {"Nevada	", "Carson City"}, {"New Hampshire", "Concord"},
+                {"Nevada", "Carson City"}, {"New Hampshire", "Concord"},
                 {"New Jersey", "Trenton"}, {"New Mexico", "Santa Fe"},
                 {"New York", "Albany"}, {"North Carolina", "Raleigh"},
                 {"North Dakota", "Bismarck"},{"Ohio", "Columbus"},
@@ -35,7 +35,7 @@ class Таск_8_37 {
                 {"Wyoming", "Cheyenne"}};
 
         for (int i = 0; i < matrix.length; i++) {
-            System.out.printf("What is the capital of %s%n", matrix[i][0]);
+            System.out.printf("What is the capital of %s%n?", matrix[i][0]);
             input = scanner.nextLine();
             if (input.equalsIgnoreCase(matrix[i][1])) {
                 System.out.println("Your answer is correct");

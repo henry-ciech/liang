@@ -41,7 +41,7 @@ class Task_8_8 {
                 }
             }
         }
-        System.out.printf("Their distance is %f", shortestDistance);
+        System.out.printf("Their distance is %f%n", shortestDistance);
     }
 
     private static double distance(double x1, double y1, double x2, double y2) {

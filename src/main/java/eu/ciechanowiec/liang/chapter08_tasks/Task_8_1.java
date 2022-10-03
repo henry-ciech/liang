@@ -22,8 +22,8 @@ class Task_8_1 {
 
     private static double sumColumn(double[][] numbers, int columnIndex) {
         double total = 0;
-        for (int i = 0; i < numbers.length; i++) {
-            total += numbers[i][columnIndex];
+        for (double[] number : numbers) {
+            total += number[columnIndex];
         }
 
         return total;

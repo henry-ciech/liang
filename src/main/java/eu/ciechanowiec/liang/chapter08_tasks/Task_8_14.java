@@ -19,7 +19,7 @@ class Task_8_14 {
 
         for (int k = 0; k < 2; k++) {
             for (int i = 0; i < m.length; i++) {
-                if (rowSequence(m,k,i)) {
+                if (isRowSequence(m,k,i)) {
                     System.out.printf("All %ds on row %d%n", k, i);
                     row++;
                 }
@@ -28,7 +28,7 @@ class Task_8_14 {
 
         for (int k = 0; k < 2; k++) {
             for (int i = 0; i < m.length; i++) {
-                if (columnSequence(m,k,i)) {
+                if (isColumnSequence(m,k,i)) {
                     System.out.printf("All %ds on column %d%n", k, i);
                     column++;
                 }
@@ -41,16 +41,16 @@ class Task_8_14 {
             System.out.println("No same numbers on a row");
         }
 
-        String majorDiagonal = (majorDiagonal(m, 1))? "One's on the diagonal" :
-                (majorDiagonal(m, 0))? "Zero's's on the diagonal" : "No same numbers on a diagonal";
-        String sunDiagonal = (subDiagonal(m, 1))? "One's on the sub diagonal" :
-                (subDiagonal(m, 0))? "Zero's's on the sub diagonal" : "No same numbers on a sub diagonal";
+        String majorDiagonal = (isMajorDiagonal(m, 1))? "One's on the diagonal" :
+                (isMajorDiagonal(m, 0))? "Zero's on the diagonal" : "No same numbers on a diagonal";
+        String sunDiagonal = (isSubDiagonal(m, 1))? "One's on the sub diagonal" :
+                (isSubDiagonal(m, 0))? "Zero's on the sub diagonal" : "No same numbers on a sub diagonal";
 
         System.out.println(majorDiagonal);
         System.out.println(sunDiagonal);
     }
 
-    private static boolean rowSequence(int[][] matrix, int number, int row) {
+    private static boolean isRowSequence(int[][] matrix, int number, int row) {
         for (int k = 0; k < matrix[row].length; k++) {
             if (matrix[row][k] != number) {
                 return false;
@@ -59,7 +59,7 @@ class Task_8_14 {
         return true;
     }
 
-    private static boolean columnSequence(int[][] matrix, int number, int column) {
+    private static boolean isColumnSequence(int[][] matrix, int number, int column) {
         for (int[] ints : matrix) {
             if (ints[column] != number) {
                 return false;
@@ -86,7 +86,7 @@ class Task_8_14 {
         }
     }
 
-    private static boolean majorDiagonal(int[][] matrix, int number) {
+    private static boolean isMajorDiagonal(int[][] matrix, int number) {
         boolean bottomLeftDown = true;
         boolean topLeftDown = true;
         int k = 0;
@@ -107,7 +107,7 @@ class Task_8_14 {
         return topLeftDown || bottomLeftDown;
     }
 
-    private static boolean subDiagonal(int[][] matrix, int number) {
+    private static boolean isSubDiagonal(int[][] matrix, int number) {
         for (int i = 1; i < matrix.length; i++) {
             if (number != matrix[i][i - 1]) {
                 return false;

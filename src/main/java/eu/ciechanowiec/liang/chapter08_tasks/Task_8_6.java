@@ -13,31 +13,31 @@ class Task_8_6 {
         print(matrix1, matrix2, matrix3);
     }
 
-    private static double[][] getMatrix(int n) {
+    private static double[][] getMatrix(int number) {
         Scanner scanner = new Scanner(System.in);
-        double[][] m = new double[3][3];
+        double[][] matrix = new double[3][3];
 
-        System.out.printf("Enter matrix %d:%n", n);
+        System.out.printf("Enter matrix %d:%n", number);
 
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                m[i][j] = scanner.nextDouble();
+                matrix[i][j] = scanner.nextDouble();
             }
         }
-        return m;
+        return matrix;
     }
 
-    private static double[][] multiplyMatrix(double[][] a, double[][] b) {
-        double[][] c = new double[3][3];
+    private static double[][] multiplyMatrix(double[][] matrix1, double[][] matrix2) {
+        double[][] matrix = new double[3][3];
 
-        for (int i = 0; i < c.length; i++) {
-            for (int j = 0; j < c[i].length; j++) {
-                for (int h = 0; h < c.length; h++) {
-                    c[i][j] += a[i][h] * b[h][j];
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                for (int h = 0; h < matrix.length; h++) {
+                    matrix[i][j] += matrix1[i][h] * matrix2[h][j];
                 }
             }
         }
-        return c;
+        return matrix;
     }
 
     private static void print(double[][] m, int r) {

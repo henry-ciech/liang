@@ -14,17 +14,18 @@ class Task_8_15 {
             }
         }
 
-        String sameLine = onTheSameLine(points)? "Points are on the same line" : "Points are not on the same line";
+        String sameLine = isOnTheSameLine(points)? "Points are on the same line" : "Points are not on the same line";
 
         System.out.println(sameLine);
 
     }
 
-    private static boolean onTheSameLine(double[][] points) {
+    private static boolean isOnTheSameLine(double[][] points) {
         boolean sameLine = true;
 
         for (int i = 2; i < points.length; i++) {
-            if ((points[1][0] - points[0][0]) * (points[i][1] - points[0][1]) - (points[i][0] - points[0][0]) * (points[1][1] - points[0][1]) != 0) {
+            if ((points[1][0] - points[0][0]) * (points[i][1] - points[0][1]) - (points[i][0] - points[0][0])
+                    * (points[1][1] - points[0][1]) != 0) {
                 sameLine = false;
                 break;
             }

@@ -6,7 +6,7 @@ import java.util.random.RandomGenerator;
 class Task_8_18 {
 
     public static void main(String[] args) {
-        int count = 0;
+        int count = 1;
 
         int[][] matrix = {
                 {1, 2},
@@ -17,12 +17,12 @@ class Task_8_18 {
 
         shuffle(matrix);
 
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
+        for (int[] ints : matrix) {
+            for (int anInt : ints) {
                 if (count % 2 == 0) {
-                    System.out.printf("%n%d ", matrix[i][j]);
+                    System.out.printf("%d%n", anInt);
                 } else {
-                    System.out.printf("%d ", matrix[i][j]);
+                    System.out.printf("%d ", anInt);
                 }
                 count++;
             }

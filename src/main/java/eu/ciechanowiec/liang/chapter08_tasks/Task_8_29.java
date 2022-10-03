@@ -2,7 +2,7 @@ package eu.ciechanowiec.liang.chapter08_tasks;
 
 import java.util.Scanner;
 
-class Таск_8_29 {
+class Task_8_29 {
 
     public static void main(String[] args) {
         System.out.print("Enter list1: ");
@@ -43,17 +43,17 @@ class Таск_8_29 {
     private static int[] matrixToArray(int[][] m) {
         int[] list = new int[m.length * m[0].length];
         int k = 0;
-        for (int i = 0; i < m.length; i++) {
-            for (int j = 0; j < m[i].length; j++) {
-                list[k] = m[i][j];
+        for (int[] ints : m) {
+            for (int anInt : ints) {
+                list[k] = anInt;
                 k++;
             }
         }
         return list;
     }
 
-    private static int[] sort(int[][] m) {
-        int [] list = matrixToArray(m);
+    private static int[] sort(int[][] matrix) {
+        int [] list = matrixToArray(matrix);
         for (int i = 0; i < 3; i++) {
             int min = list[i];
             int minIndex = i;

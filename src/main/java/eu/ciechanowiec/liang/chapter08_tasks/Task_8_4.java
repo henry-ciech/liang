@@ -52,8 +52,8 @@ class Task_8_4 {
     private static int sum(int[] numbers) {
         int total = 0;
 
-        for (int i = 0; i < numbers.length; i++) {
-            total += numbers[i];
+        for (int number : numbers) {
+            total += number;
         }
 
         return total;

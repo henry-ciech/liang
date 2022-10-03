@@ -3,7 +3,7 @@ package eu.ciechanowiec.liang.chapter08_tasks;
 class Task_8_16 {
 
     public static void main(String[] args) {
-        int count = 0;
+        int count = 1;
         int[][] matrix = {
                 {4, 2},
                 {1, 7},
@@ -18,7 +18,7 @@ class Task_8_16 {
         for (int[] ints : matrix) {
             for (int anInt : ints) {
                 if (count % 2 == 0) {
-                    System.out.printf("%n%d ", anInt);
+                    System.out.printf("%d%n", anInt);
                 } else {
                     System.out.printf("%d ", anInt);
                 }

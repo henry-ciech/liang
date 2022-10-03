@@ -23,7 +23,7 @@ class Task_8_35 {
             System.out.printf("The maximum square submatrix is at (%d, %d) with size %d",
                     location[0], location[1], location[2]);
         }
-
+        System.out.println();
     }
 
     private static int[] findLargestBlock(int[][] matrix) {
@@ -36,7 +36,7 @@ class Task_8_35 {
                 if (occurrence < 2) {
                     continue;
                 }
-                if (scanPossibleSquare(matrix, i, j, occurrence) && occurrence > highestSize) {
+                if (isScanPossibleSquare(matrix, i, j, occurrence) && occurrence > highestSize) {
                     highestSize = occurrence;
                     highestSquare = new int[]{i,j,occurrence};
                 }
@@ -65,11 +65,11 @@ class Task_8_35 {
         return 0;
     }
 
-    private static boolean scanPossibleSquare(int[][] m, int row, int column, int occurrence) {
-        if (row + occurrence > m.length) return false;
+    private static boolean isScanPossibleSquare(int[][] matrix, int row, int column, int occurrence) {
+        if (row + occurrence > matrix.length) return false;
         for (int i = row; i < occurrence + row; i++) {
             for (int j = column; j < occurrence + column; j++) {
-                if (m[i][j] == 0) {
+                if (matrix[i][j] == 0) {
                     return false;
                 }
             }

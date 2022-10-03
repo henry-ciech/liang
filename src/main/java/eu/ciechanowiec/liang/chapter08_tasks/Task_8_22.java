@@ -14,12 +14,12 @@ class Task_8_22 {
 
         fillMatrix(matrix);
 
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
+        for (int[] ints : matrix) {
+            for (int anInt : ints) {
                 if (count % 6 == 0) {
-                    System.out.printf("%d%n", matrix[i][j]);
+                    System.out.printf("%d%n", anInt);
                 } else {
-                    System.out.printf("%d ", matrix[i][j]);
+                    System.out.printf("%d ", anInt);
                 }
                 count++;
             }

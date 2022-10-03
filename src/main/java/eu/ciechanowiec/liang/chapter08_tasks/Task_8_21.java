@@ -23,9 +23,9 @@ class Task_8_21 {
         int shortestDistanceIndex = -1;
         double[] distances = new double[number];
         for (int i = 0; i < cities.length; i++) {
-            for (int j = 0; j < cities.length; j++) {
-                distances[i] += Math.sqrt((cities[j][1] - cities[i][1]) * (cities[j][1] - cities[i][1]) +
-                        (cities[j][0] - cities[i][0]) * (cities[j][0] - cities[i][0]));
+            for (double[] city : cities) {
+                distances[i] += Math.sqrt((city[1] - cities[i][1]) * (city[1] - cities[i][1]) +
+                        (city[0] - cities[i][0]) * (city[0] - cities[i][0]));
             }
         }
 

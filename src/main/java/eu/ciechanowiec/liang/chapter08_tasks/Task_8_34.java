@@ -8,7 +8,7 @@ class Task_8_34 {
         Scanner scanner = new Scanner(System.in);
         double[][] points = new double[6][2];
 
-        System.out.println("Enter 6 points");
+        System.out.println("Enter 6 points:");
         for (int i = 0; i < points.length; i++) {
             for (int j = 0; j < points[i].length; j++) {
                 points[i][j] = scanner.nextDouble();

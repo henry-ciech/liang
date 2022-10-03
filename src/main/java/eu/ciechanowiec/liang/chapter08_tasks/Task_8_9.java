@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 class Task_8_9 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
         String[][] matrix = new String[3][3];
         int count = 1;
 
@@ -28,15 +27,15 @@ class Task_8_9 {
     }
 
     private static void print(String[][] matrix) {
-        for (int i = 0; i < matrix.length; i++) {
+        for (String[] strings : matrix) {
             System.out.print("--------------");
             System.out.println();
             System.out.print("|");
-            for (int j = 0; j < matrix[i].length; j++) {
-                if (matrix[i][j] == null) {
+            for (String string : strings) {
+                if (string == null) {
                     System.out.print("   |");
                 } else {
-                    System.out.printf(" %s |", matrix[i][j]);
+                    System.out.printf(" %s |", string);
                 }
             }
             System.out.println();

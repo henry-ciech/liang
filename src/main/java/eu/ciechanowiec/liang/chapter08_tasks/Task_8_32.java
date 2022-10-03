@@ -16,10 +16,10 @@ class Task_8_32 {
         }
 
         double area = getTriangleArea(points);
-        if (area <= 0) {
-            System.out.println("Points are on the same line");
+        if (area > 0) {
+            System.out.printf("Area: %.1f%n", area);
         } else {
-            System.out.printf("Area: %.1f", area);
+            System.out.printf("Points are on the same line%n");
         }
     }
 

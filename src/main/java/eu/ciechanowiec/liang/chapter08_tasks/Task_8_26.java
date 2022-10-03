@@ -28,15 +28,15 @@ class Task_8_26 {
                 count++;
             }
         }
+
+        System.out.println();
     }
 
     private static double[][] sortRows(double[][] matrix) {
         double[][] sortedRows = new double[matrix.length][matrix[0].length];
 
         for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[0].length; j++) {
-                sortedRows[i][j] = matrix[i][j];
-            }
+            System.arraycopy(matrix[i], 0, sortedRows[i], 0, matrix[0].length);
         }
 
         for (int i = 0; i < sortedRows.length; i++) {

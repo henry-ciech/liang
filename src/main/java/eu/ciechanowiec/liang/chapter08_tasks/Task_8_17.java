@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 class Task_8_17 {
 
-    static final int ID = 0;
-    static final int LOAN = 1;
-    static double[][][] mBanks;
+    private static final int ID = 0;
+    private static final int LOAN = 1;
+    private static double[][][] mBanks;
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -56,10 +56,10 @@ class Task_8_17 {
             isSafe = true;
             for (int banks = 0; banks < matrix.length; banks++) {
                 total = matrix[banks][0][0];
-                for (int LoanedBanks = 1; LoanedBanks < matrix[banks].length; LoanedBanks++) {
-                    int index = (int)matrix[banks][LoanedBanks][ID];
+                for (int loanedBanks = 1; loanedBanks < matrix[banks].length; loanedBanks++) {
+                    int index = (int)matrix[banks][loanedBanks][ID];
                     if (!indexUnsafeBanks[index]) {
-                        total += matrix[banks][LoanedBanks][LOAN];
+                        total += matrix[banks][loanedBanks][LOAN];
                     }
                 }
                 if (total < limit && !indexUnsafeBanks[banks]) {

@@ -13,7 +13,6 @@ class Task_8_12 {
                 {8350, 33950, 68525, 104425, 186475},
                 {11950, 45500, 117450, 190200, 372950}
         };
-
         System.out.println("""
                 Enter the filing status:
                 0 - single filer
@@ -22,11 +21,9 @@ class Task_8_12 {
                 3 - head of household
                 """);
         int status = getStatus();
-
         System.out.print("Enter the taxable income: ");
         double income = scanner.nextDouble();
-
-        System.out.printf("Tax is $%6.2f%n",
+        System.out.printf("Income after taxes $%6.2f%n",
                 computeTax(brackets, rates, status, income));
     }
 
@@ -39,7 +36,7 @@ class Task_8_12 {
             }
             income -= incomeTaxed;
         }
-        return brackets[status][0] * rates[0];
+        return incomeTaxed;
     }
 
     private static int getStatus(){

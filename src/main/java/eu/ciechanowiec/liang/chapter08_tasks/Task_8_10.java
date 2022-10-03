@@ -8,7 +8,7 @@ class Task_8_10 {
     public static void main(String[] args) {
         RandomGenerator random = new Random();
         int[][] matrix = new int[4][4];
-        int count = 0;
+        int count = 1;
         int countRow = 0;
         int countColumn = 0;
         int largestRow = -1;
@@ -22,12 +22,13 @@ class Task_8_10 {
             }
         }
 
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
+        for (int[] ints : matrix) {
+            for (int anInt : ints) {
                 if (count % 4 == 0) {
-                    System.out.println();
+                    System.out.printf("%d%n", anInt);
+                } else {
+                    System.out.printf("%d", anInt);
                 }
-                System.out.printf("%d ", matrix[i][j]);
                 count++;
             }
         }
@@ -58,7 +59,7 @@ class Task_8_10 {
             countColumn = 0;
         }
 
-        System.out.printf("%nThe Largest row index: %d", largestRow);
-        System.out.printf("%nThe Largest column index: %d%n", largestColumn);
+        System.out.printf("%nThe largest row index: %d", largestRow);
+        System.out.printf("%nThe largest column index: %d%n", largestColumn);
     }
 }

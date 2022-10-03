@@ -5,40 +5,60 @@ import java.util.Scanner;
 class Task_8_27 {
 
     public static void main(String[] args) {
-        int[][] matrix1 = new int[3][3];
-        int[][] matrix2 = new int[3][3];
-        Scanner scanner = new Scanner(System.in);
+        double[][] matrix = getMatrix();
+        double[][] sortedMatrix = sortColumns(matrix);
 
-        System.out.println("Enter list1");
-        for (int i = 0; i < matrix1.length; i++) {
-            for (int j = 0; j < matrix1[i].length; j++) {
-                matrix1[i][j] = scanner.nextInt();
+        System.out.println("\nThe column-sorted array is");
+        for (double[] doubles : sortedMatrix) {
+            for (int j = 0; j < sortedMatrix.length; j++) {
+                System.out.print(doubles[j] + " ");
             }
+            System.out.println();
         }
-
-        System.out.println("Enter list2:");
-        for (int i = 0; i < matrix2.length; i++) {
-            for (int j = 0; j < matrix2[i].length; j++) {
-                matrix2[i][j] = scanner.nextInt();
-            }
-        }
-
-        String output = (equals(matrix1, matrix2)) ? "The two arrays are strictly identical" :
-                "The two arrays are not strictly identical";
-
-        System.out.println(output);
     }
 
-    private static boolean equals(int[][] matrix1, int[][] matrix2) {
-        boolean equal = true;
-        for (int i = 0; i < matrix1.length; i++) {
-            for (int j = 0; j < matrix1[i].length; j++) {
-                if (matrix1[i][j] != matrix2[i][j]) {
-                    equal = false;
-                    break;
+    private static double[][] getMatrix() {
+        Scanner scanner = new Scanner(System.in);
+        double[][] doubles = new double[3][3];
+
+        System.out.println("Enter a 3-by-3 matrix row by row:");
+        for (int i = 0; i < doubles.length; i++) {
+            for (int j = 0; j < doubles[i].length; j++) {
+                doubles[i][j] = scanner.nextDouble();
+            }
+        }
+        return doubles;
+    }
+
+    private static double[][] sortColumns(double[][] matrix)  {
+        double[][] s = new double[matrix.length][matrix[0].length];
+
+        copyMatrix(matrix, s);
+
+        for (int col = 0; col < s.length; col++) {
+            for (int row = 0; row < s.length - 1; row++) {
+                double min = s[row][col];
+                int index = row;
+                for (int j = row + 1; j < s.length; j++) {
+                    if (min > s[j][col]) {
+                        min = s[j][col];
+                        index = j;
+                    }
+                }
+                if (index != row) {
+                    s[index][col] = s[row][col];
+                    s[row][col] = min;
                 }
             }
         }
-        return equal;
+        return s;
+    }
+
+    private static void copyMatrix(double[][] original, double[][] copy) {
+        for (int i = 0; i < original.length; i++) {
+            for (int j = 0; j < original[i].length; j++) {
+                copy[i][j] = original[i][j];
+            }
+        }
     }
 }
