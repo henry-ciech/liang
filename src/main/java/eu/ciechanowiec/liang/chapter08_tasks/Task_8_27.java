@@ -56,9 +56,7 @@ class Task_8_27 {
 
     private static void copyMatrix(double[][] original, double[][] copy) {
         for (int i = 0; i < original.length; i++) {
-            for (int j = 0; j < original[i].length; j++) {
-                copy[i][j] = original[i][j];
-            }
+            System.arraycopy(original[i], 0, copy[i], 0, original[i].length);
         }
     }
 }
