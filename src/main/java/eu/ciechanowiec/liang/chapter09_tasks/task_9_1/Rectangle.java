@@ -2,8 +2,8 @@ package eu.ciechanowiec.liang.chapter09_tasks.task_9_1;
 
 class Rectangle {
 
-    double width = 1;
-    double height = 1;
+    private double width = 1;
+    private double height = 1;
 
     Rectangle() {
     }

@@ -2,9 +2,9 @@ package eu.ciechanowiec.liang.chapter09_tasks.task_9_13;
 
 class Location {
 
-    int row;
-    int column;
-    double maxValue;
+    private int row;
+    private int column;
+    private double maxValue;
 
     Location(double[][] a) {
         maxValue = a[0][0];

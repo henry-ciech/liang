@@ -2,8 +2,8 @@ package eu.ciechanowiec.liang.chapter09_tasks.task_9_2;
 
 class Stock {
 
-    String symbol;
-    String name;
+    private final String symbol;
+    private final String name;
 
     Stock(String symbol, String name) {
         this.symbol = symbol;
