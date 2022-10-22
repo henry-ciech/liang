@@ -7,15 +7,15 @@ class StopWatchTest {
 
     public static void main(String[] args) {
         StopWatch stopWatch = new StopWatch();
-        int[] array = getArray();
+        int[] array = generateArray();
 
         stopWatch.start();
-        selectionSort(array);
+        performSelectionSort(array);
         stopWatch.stop();
-        System.out.printf("Execution time: %.1f%n", stopWatch.getElapsedTime() / 1000);
+        System.out.printf("Execution time: %.1f sec%n", stopWatch.getElapsedTime() / 1000);
     }
 
-    private static int[] getArray() {
+    private static int[] generateArray() {
         RandomGenerator random = new Random();
         int[] array = new int[100000];
 
@@ -25,7 +25,7 @@ class StopWatchTest {
         return array;
     }
 
-    private static void selectionSort(int[] array) {
+    private static void performSelectionSort(int[] array) {
         for (int i = 0; i < array.length - 1; i++) {
             int min = array[i];
             int minIndex = i;

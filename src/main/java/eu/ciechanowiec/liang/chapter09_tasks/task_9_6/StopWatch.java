@@ -2,11 +2,11 @@ package eu.ciechanowiec.liang.chapter09_tasks.task_9_6;
 
 class StopWatch {
 
-    private double starTime;
+    private double startTime;
     private double endTime;
 
-    double getStarTime() {
-        return starTime;
+    double getStartTime() {
+        return startTime;
     }
 
     double getEndTime() {
@@ -14,11 +14,11 @@ class StopWatch {
     }
 
     StopWatch() {
-        starTime = System.currentTimeMillis();
+        startTime = System.currentTimeMillis();
     }
 
     void start() {
-        starTime = System.currentTimeMillis();
+        startTime = System.currentTimeMillis();
     }
 
     void stop() {
@@ -26,6 +26,6 @@ class StopWatch {
     }
 
     double getElapsedTime() {
-        return endTime - starTime;
+        return endTime - startTime;
     }
 }

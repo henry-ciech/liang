@@ -47,7 +47,7 @@ class Account {
         return dateCreated.toString();
     }
 
-    double getMonthlyInterestRate() {
+    private double getMonthlyInterestRate() {
         return annualInterestRate / 12;
     }
 

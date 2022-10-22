@@ -7,19 +7,19 @@ class TestFan {
         Fan fan2 = new Fan();
 
         fan1.setOn(true);
-        fan1.setSpeed(3);
+        fan1.setSpeed(Fan.FAST);
         fan1.setRadius(10);
         fan1.setColor("yellow");
 
         fan2.setOn(false);
-        fan2.setSpeed(2);
+        fan2.setSpeed(Fan.MEDIUM);
         fan2.setRadius(5);
         fan2.setColor("blue");
 
         System.out.println("Fan1:");
-        System.out.println(fan1.fanVariables());
+        System.out.println(fan1);
 
         System.out.println("Fan2:");
-        System.out.print(fan2.fanVariables());
+        System.out.print(fan2);
     }
 }

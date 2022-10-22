@@ -1,5 +1,8 @@
 package eu.ciechanowiec.liang.chapter09_tasks.task_9_12;
 
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
 class LinearEquation {
 
     private final double a;
@@ -8,15 +11,6 @@ class LinearEquation {
     private final double d;
     private final double e;
     private final double f;
-
-    LinearEquation(double a, double b, double c, double d, double e, double f) {
-        this.a = a;
-        this.b = b;
-        this.c = c;
-        this.d = d;
-        this.e = e;
-        this.f = f;
-    }
 
     boolean isSolvable() {
         return a * d - b * c != 0;

@@ -8,9 +8,9 @@ class TestAccount {
         account.withdraw(2500);
         account.deposit(3000);
         System.out.printf("""
-                Balance: %.1f
-                Monthly interest rate: %1f
+                Balance: %.2f
+                Monthly interest rate: %.0f%%
                 Date when account was created: %s
-                """, account.getBalance(), account.getAnnualInterestRate(), account.getDateCreated());
+                """, account.getBalance(), account.getAnnualInterestRate() * 100, account.getDateCreated());
     }
 }

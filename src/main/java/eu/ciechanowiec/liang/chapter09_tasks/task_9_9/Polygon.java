@@ -2,12 +2,16 @@ package eu.ciechanowiec.liang.chapter09_tasks.task_9_9;
 
 class Polygon {
 
-    private int numberOfSides = 3;
-    private double side = 1;
-    private double x = 0;
-    private double y = 0;
+    private int numberOfSides;
+    private double side;
+    private double x;
+    private double y;
 
     Polygon() {
+        numberOfSides = 3;
+        side = 1;
+        x = 0;
+        y = 0;
     }
 
     Polygon(int numberOfSides, double side) {

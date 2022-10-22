@@ -2,13 +2,20 @@ package eu.ciechanowiec.liang.chapter09_tasks.task_9_8;
 
 class Fan {
 
-    private static final int SLOW = 1;
-    private static final int MEDIUM = 2;
-    private static final int LOW = 3;
-    private int speed = SLOW;
-    private boolean on = false;
-    private double radius = 5;
-    private String color = "blue";
+    static final int SLOW = 1;
+    static final int MEDIUM = 2;
+    static final int FAST = 3;
+    private int speed;
+    private boolean on;
+    private double radius;
+    private String color;
+
+    Fan() {
+        speed = SLOW;
+        on = false;
+        radius = 5;
+        color = "blue";
+    }
 
     void setColor(String color) {
         this.color = color;
@@ -42,7 +49,8 @@ class Fan {
         return on;
     }
 
-    String fanVariables() {
+    @Override
+    public String toString() {
         String text;
         if (on) {
             text = String.format("""

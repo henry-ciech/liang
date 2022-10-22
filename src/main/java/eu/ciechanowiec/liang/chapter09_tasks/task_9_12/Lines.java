@@ -6,7 +6,7 @@ class Lines {
 
     public static void main(String[] args) {
         System.out.println("Enter x1, y1, x2, y2, x3, y3, x4, y4: ");
-        double[][] points = getPoints();
+        double[][] points = getPointsFromUser();
         double[] p = getArguments(points);
 
         LinearEquation intersectingPoint = new LinearEquation(p[0], p[1], p[2], p[3], p[4], p[5]);
@@ -20,7 +20,7 @@ class Lines {
         }
     }
 
-    private static double[][] getPoints() {
+    private static double[][] getPointsFromUser() {
         Scanner scanner = new Scanner(System.in);
         double[][] points = new double[4][2];
 

@@ -1,28 +1,6 @@
 package eu.ciechanowiec.liang.chapter09_tasks.task_9_10;
 
-class Algebra {
-
-    private final double a;
-    private final double b;
-    private final double c;
-
-    Algebra(double a, double b, double c) {
-        this.a = a;
-        this.b = b;
-        this.c = c;
-    }
-
-    double getA() {
-        return a;
-    }
-
-    double getB() {
-        return b;
-    }
-
-    double getC() {
-        return c;
-    }
+record Algebra(double a, double b, double c) {
 
     double getDiscriminant() {
         return Math.pow(b, 2) - 4 * a * c;
