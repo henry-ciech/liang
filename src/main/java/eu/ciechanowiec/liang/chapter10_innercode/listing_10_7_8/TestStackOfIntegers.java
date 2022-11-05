@@ -9,7 +9,7 @@ class TestStackOfIntegers {
             stack.push(i);
         }
 
-        while (!stack.empty()) {
+        while (!stack.isEmpty()) {
             System.out.printf("%s ", stack.pop());
         }
 

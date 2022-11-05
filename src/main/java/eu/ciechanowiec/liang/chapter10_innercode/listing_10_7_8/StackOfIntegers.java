@@ -31,7 +31,7 @@ public class StackOfIntegers {
         return elements[size - 1];
     }
 
-    public boolean empty() {
+    public boolean isEmpty() {
         return size == 0;
     }
 

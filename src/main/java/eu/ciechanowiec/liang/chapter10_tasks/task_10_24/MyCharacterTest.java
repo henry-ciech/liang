@@ -1,6 +1,7 @@
 package eu.ciechanowiec.liang.chapter10_tasks.task_10_24;
 
 class MyCharacterTest {
+
     public static void main(String[] args) {
         MyCharacter ch = new MyCharacter('L');
 

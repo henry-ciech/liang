@@ -12,6 +12,6 @@ class CircleTest {
                 circle1 overlaps circle (3, 5, 2.3): %b
                 """, circle1.getArea(), circle1.getPerimeter(), circle1.contains(3, 3),
                 circle1.contains(new Circle(4, 5, 10.5)),
-                circle1.overlaps(new Circle(3, 5, 2.3))); //I've checked with other circles, it is correct
+                circle1.overlaps(new Circle(3, 5, 2.3))); // I've checked with other circles, it is correct
     }
 }

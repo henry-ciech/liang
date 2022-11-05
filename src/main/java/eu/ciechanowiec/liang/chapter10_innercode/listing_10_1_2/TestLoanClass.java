@@ -18,7 +18,6 @@ class TestLoanClass {
 
         Loan loan = new Loan(annualInterestRate, numberOfYears, loanAmount);
 
-
         System.out.printf("""
                 The loan was created on %s
                 The monthly payment is %.2f

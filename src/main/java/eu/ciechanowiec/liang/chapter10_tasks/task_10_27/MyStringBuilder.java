@@ -2,59 +2,56 @@ package eu.ciechanowiec.liang.chapter10_tasks.task_10_27;
 
 class MyStringBuilder {
 
-    String build = "";
+    private final char[] word;
 
-    MyStringBuilder(String build) {
-        this.build += build;
+    MyStringBuilder(char[] word) {
+        this.word = new char[word.length];
     }
 
     MyStringBuilder append (MyStringBuilder string) {
-        build += String.valueOf(string);
-        return new MyStringBuilder(build);
+        char[] newBuild = new char[string.length() + word.length];
+        System.arraycopy(word, 0, newBuild, 0, word.length);
+
+        for (int i = word.length; i < string.length(); i++) {
+            newBuild[i] = string.charAt(i);
+        }
+        return new MyStringBuilder(newBuild);
     }
 
-    MyStringBuilder append (int number) {
-        build += String.valueOf(number);
-        return new MyStringBuilder(build);
+    MyStringBuilder append(int number) {
+        int count = 0;
+        char[] digits = String.valueOf(number).toCharArray();
+        for (; number != 0; number /= 10, ++count);
+
+        char[] newStr = new char[word.length + count];
+
+        for (int i = 0; i < count; i++) {
+            newStr[word.length + i] = digits[i];
+        }
+        return new MyStringBuilder(newStr);
     }
 
     int length() {
-        return String.valueOf(build).length();
+        return word.length;
     }
 
     char charAt(int index) {
-        return build.charAt(index);
+        return word[index];
     }
 
     MyStringBuilder toLowerCase() {
-        String lowerCase = "";
-        for (int i = 0; i < length(); i++) {
-            if (build.charAt(i) >= 'A' && build.charAt(i) <= 'Z') {
-                lowerCase += (char) (build.charAt(i) + 32);
+        char[] ch = new char[word.length];
+        for (int i = 0; i < word.length; i++) {
+            if (word[i] >= 'A' && word[i] <= 'Z') {
+                ch[i] = (char) (word[i] + 32);
             } else {
-                lowerCase += build.charAt(i);
+                ch[i] = word[i];
             }
         }
-        return new MyStringBuilder(lowerCase);
+        return new MyStringBuilder(ch);
     }
 
-    MyStringBuilder substring(int begin, int end) {
-        String subStr = "";
-
-        for (int i = begin, j = 0; i < end; i++, j++) {
-            subStr += build.charAt(i);
-        }
-
-        return new MyStringBuilder(subStr);
-    }
-
-    String BuilderToString() {
-        String toStr = "";
-        toStr += build;
-        return toStr;
-    }
-
-    String getBuild() {
-        return build;
+    char[] getWord() {
+        return word;
     }
 }

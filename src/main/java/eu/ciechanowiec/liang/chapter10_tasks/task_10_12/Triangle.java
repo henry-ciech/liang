@@ -50,7 +50,9 @@ class Triangle {
         double minX = getMin(p1.getX(), p2.getX(), p3.getX());
         double minY = getMin(p1.getX(), p2.getX(), p3.getX());
 
-        if (x < minX || x > maxX || y < minY || y > maxY)  return false;
+        if (x < minX || x > maxX || y < minY || y > maxY) {
+            return false;
+        }
 
         MyPoint p = new MyPoint(x, y);
         boolean side1 = p.onTheLineSegment(p1, p2);
@@ -60,7 +62,6 @@ class Triangle {
     }
 
     boolean contains(Triangle triangle) {
-
         return contains(triangle.p1) && contains(triangle.p2) && contains(triangle.p3);
     }
 

@@ -15,8 +15,9 @@ class PrimeFactorTest {
         StackOfIntegers stack = new StackOfIntegers();
 
         prime.smallestFactors(stack);
+        System.out.print("PrimeFactors: ");
 
-        while (!stack.empty()) {
+        while (!stack.isEmpty()) {
             System.out.printf("%d ", stack.pop());
         }
 

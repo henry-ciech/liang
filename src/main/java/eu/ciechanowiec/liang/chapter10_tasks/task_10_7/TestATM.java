@@ -1,17 +1,22 @@
 package eu.ciechanowiec.liang.chapter10_tasks.task_10_7;
 
 import java.util.Scanner;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 class TestATM {
 
     private static int chosenID;
-    static ATM[] accounts = new ATM[10];
+
+    private static final AtomicBoolean isOn = new AtomicBoolean(false);
+    static Account[] ATM = new Account[10];
 
     public static void main(String[] args) {
         addAccounts();
         choseID();
-        while (true) {
-            System.out.println( );
+
+        isOn.set(true);
+        while (isOn.get()) {
+            System.out.println();
             printMainMenu();
         }
     }
@@ -27,25 +32,25 @@ class TestATM {
                 5: exit
                 Enter a choice:
                 """);
-        operation(scanner.nextInt());
+        performOperation(scanner.nextInt());
     }
 
-    static void operation(int chosenOperation) {
+    static void performOperation(int chosenOperation) {
         Scanner scanner = new Scanner(System.in);
         switch (chosenOperation) {
-            case 1 -> System.out.printf("Balance: $%.1f%n", accounts[chosenID].printBalance());
+            case 1 -> System.out.printf("Balance: $%.1f%n", ATM[chosenID].printBalance());
             case 2 -> {
                 System.out.println("Enter amount to withdraw:");
-                accounts[chosenID].withdraw(scanner.nextDouble());
+                ATM[chosenID].withdraw(scanner.nextDouble());
             }
             case 3 -> {
                 System.out.println("Enter amount to add:");
-                accounts[chosenID].deposit(scanner.nextDouble());
+                ATM[chosenID].deposit(scanner.nextDouble());
             }
             case 4 -> choseID();
             case 5 -> {
                 System.out.println("Goodbye");
-                System.exit(0);
+                isOn.set(false);
             }
             default -> System.out.println("Wrong input");
         }
@@ -66,15 +71,15 @@ class TestATM {
     }
 
     static void addAccounts() {
-        accounts[0] = new ATM();
-        accounts[1] = new ATM();
-        accounts[2] = new ATM();
-        accounts[3] = new ATM();
-        accounts[4] = new ATM();
-        accounts[5] = new ATM();
-        accounts[6] = new ATM();
-        accounts[7] = new ATM();
-        accounts[8] = new ATM();
-        accounts[9] = new ATM();
+        ATM[0] = new Account();
+        ATM[1] = new Account();
+        ATM[2] = new Account();
+        ATM[3] = new Account();
+        ATM[4] = new Account();
+        ATM[5] = new Account();
+        ATM[6] = new Account();
+        ATM[7] = new Account();
+        ATM[8] = new Account();
+        ATM[9] = new Account();
     }
 }

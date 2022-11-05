@@ -12,7 +12,7 @@ class BigDecimal {
 
         System.out.println();
         while (count < NUMBER_OF_PRIMES) {
-            number = new BigInteger("1").add(number);
+            number = BigInteger.valueOf(1).add(number);
             if (isPrime(number)){
                 count++;
                 System.out.println(number);
@@ -21,11 +21,12 @@ class BigDecimal {
     }
 
     static boolean isPrime(BigInteger number) {
-        for (BigInteger d = new BigInteger("2");
-             d.compareTo(number.divide(new BigInteger("2"))) <= 0;
-             d = d.add(new BigInteger("1"))) {
-             if (number.remainder(d).compareTo(new BigInteger("0")) == 0) {
-                 return false;
+        for (BigInteger traversNumber = BigInteger.valueOf(2);
+             traversNumber.compareTo(number.divide(BigInteger.valueOf(2))) <= 0;
+             traversNumber = traversNumber.add(BigInteger.valueOf(1))) {
+            BigInteger remainder = number.remainder(traversNumber);
+            if (remainder.compareTo(BigInteger.valueOf(0)) == 0) {
+                return false;
             }
         }
         return true;

@@ -1,5 +1,7 @@
 package eu.ciechanowiec.liang.chapter10_tasks.task_10_9;
 
+import java.util.stream.Stream;
+
 class Course {
 
     private final String courseName;
@@ -21,7 +23,7 @@ class Course {
     }
 
     String[] getStudents() {
-        return students;
+        return Stream.of(students).toArray(String[]::new);
     }
 
     int getNumberOfStudents() {

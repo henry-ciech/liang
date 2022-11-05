@@ -23,5 +23,6 @@ Here you can find my solution of Liang Java Tutorial tasks and inner codes for e
 . Task 7_36
 . Task 7_37
 . Diagrams
+. Task 10_8
 . Task 10_25
 . Task 10_26

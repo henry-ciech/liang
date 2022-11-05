@@ -2,69 +2,68 @@ package eu.ciechanowiec.liang.chapter10_tasks.task_10_23;
 
 class MyString2 {
 
-    private final String word;
+    private final char[] word;
 
-    MyString2(String word) {
-        this.word = word;
+    MyString2(char[] word) {
+        this.word = new char[word.length];
+        System.arraycopy(word, 0, this.word, 0, word.length);
     }
 
-    int compare(String valueToCompare) {
+    int compare(char[] valueToCompare) {
         int index = 0;
 
-        if (word.length() < valueToCompare.length()) {
+        if (word.length < valueToCompare.length) {
             index = -1;
         }
-        if (valueToCompare.length() < word.length()) {
+
+        if (word.length > valueToCompare.length) {
             index = 1;
         }
 
-        for (int i = 0; i < word.length(); i++) {
-            if (word.charAt(i) < valueToCompare.charAt(i)) {
+        for (int i = 0; i < word.length; i++) {
+            if (word[i] < valueToCompare[i]) {
                 index = -(i + 1);
             }
-            if (word.charAt(i) > valueToCompare.charAt(i)) {
+            if (word[i] > valueToCompare[i]) {
                 index = i + 1;
             }
         }
         return index;
     }
 
-    MyString2 substring(int begin) {
-        StringBuilder subStr = new StringBuilder();
-        for (int i = begin; i < word.length(); i++) {
-            subStr.append(word.charAt(i));
-        }
-
-        return new MyString2(subStr.toString());
-    }
-
     MyString2 toUpperCase() {
-        StringBuilder upperCase = new StringBuilder();
-        for (int i = 0; i < word.length(); i++) {
-            if (word.charAt(i) >= 'a' && word.charAt(i) <= 'z') {
-                upperCase.append((char) (word.charAt(i) - 32));
+        char[] ch = new char[word.length];
+        for (int i = 0; i < word.length; i++) {
+            if (word[i] >= 'a' && word[i] <= 'z') {
+                ch[i] = (char) (word[i] - 32);
             } else {
-                upperCase.append(word.charAt(i));
+                ch[i] = word[i];
             }
         }
-
-        return new MyString2(upperCase.toString());
+        return new MyString2(ch);
     }
 
     char[] toChars() {
-        char[] chars = new char[word.length()];
-        for (int i = 0; i < chars.length; i++) {
-            chars[i] += word.charAt(i);
-        }
-
-        return chars;
+        return word;
     }
 
     static MyString2 valueOf(boolean trueOrFalse) {
-        return (trueOrFalse ? new MyString2("true") : new MyString2("false"));
+        char[] ch;
+        String trueStr = "true";
+        String falseStr = "false";
+
+        if (trueOrFalse) {
+            ch = trueStr.toCharArray();
+        } else {
+            ch = falseStr.toCharArray();
+        }
+
+        return new MyString2(ch);
     }
 
-    String printWord() {
-        return word;
+    void printChar() {
+        for (char c : word) {
+            System.out.print(c + " ");
+        }
     }
- }
+}

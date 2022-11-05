@@ -2,7 +2,7 @@ package eu.ciechanowiec.liang.chapter10_tasks.task_10_12;
 
 import eu.ciechanowiec.liang.chapter10_tasks.task_10_4.MyPoint;
 
-class TestTriangle { //works incorrectly
+class TestTriangle { // Works incorrectly
 
     public static void main(String[] args) {
         Triangle triangle = new Triangle(new MyPoint(2.5, 2), new MyPoint(4.2, 3),

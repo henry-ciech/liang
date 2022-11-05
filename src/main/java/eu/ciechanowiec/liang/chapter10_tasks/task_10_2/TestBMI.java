@@ -8,9 +8,9 @@ class TestBMI {
         BMI bmi3 = new BMI("Herman", 28, 200, 6, 0); //Overweight :(
 
         System.out.printf("""
-               BMI for %s is %.1f %s
-               BMI for %s is %.1f %s
-               BMI for %s is %.1f %s
+               BMI for %s is %.1f - %s
+               BMI for %s is %.1f - %s
+               BMI for %s is %.1f - %s
                """, bmi1.getName(), bmi1.getBMI(), bmi1.getStatus(), bmi2.getName(), bmi2.getBMI(), bmi2.getStatus(),
                 bmi3.getName(), bmi3.getBMI(), bmi3.getStatus());
 

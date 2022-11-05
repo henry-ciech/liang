@@ -2,65 +2,70 @@ package eu.ciechanowiec.liang.chapter10_tasks.task_10_28;
 
 class MyStringBuilder {
 
-    private final String build;
+    private final char[] word;
+    private static final String TEST = "test";
 
     MyStringBuilder() {
-        build = "";
+        word = TEST.toCharArray();
     }
 
-    MyStringBuilder(char[] chars) {
-        build = String.valueOf(chars);
+    MyStringBuilder(char[] word) {
+        this.word = new char[word.length];
     }
 
     MyStringBuilder(String build) {
-        this.build = build;
+        word = build.toCharArray();
     }
 
     MyStringBuilder insert(int offset, MyStringBuilder str) {
-        String newStr = "";
-        for (int i = 0; i < offset; i++) {
-            newStr += this.build.charAt(i) + "";
+        char[] newChar = new char[str.length() + word.length];
+        if (offset >= 0) {
+            System.arraycopy(word, 0, newChar, 0, offset);
         }
-        newStr += str;
-        return new MyStringBuilder(newStr + substring(offset));
+
+        for (int i = offset, j = 0; j < str.length(); i++, j++) {
+            newChar[i] = str.charAt(j);
+        }
+
+        if (word.length - (str.length() + offset) >= 0) {
+            System.arraycopy(word, str.length() + offset,
+                    newChar, str.length() + offset, word.length - (str.length() + offset));
+
+        }
+
+        return new MyStringBuilder(newChar);
     }
 
     MyStringBuilder reverse() {
-        String newStr = "";
-        for (int i = build.length() - 1; i >= 0; i--) {
-            newStr += build.charAt(i) + "";
-        }
-        return new MyStringBuilder(newStr);
-    }
+        char[] newChar = new char[word.length];
 
-    MyStringBuilder substring(int begin) {
-        String newStr = "";
-        for (int i = begin; i < build.length(); i++) {
-            newStr += build.charAt(i) + "";
+        for (int i = word.length - 1, j = 0; i >= 0; i--, j++) {
+            newChar[i] = word[j];
         }
-        return new MyStringBuilder(newStr);
+
+        return new MyStringBuilder(newChar);
     }
 
     MyStringBuilder toUpperCase() {
-        String newStr = "";
-        for (int i = 0; i < build.length(); i++) {
-            if (build.charAt(i) >= 'a' && build.charAt(i) <= 'z')
-                newStr += (char)(build.charAt(i) - 32) + "";
-            else
-                newStr += build.charAt(i) + "";
+        char[] ch = new char[word.length];
+        for (int i = 0; i < word.length; i++) {
+            if (word[i] >= 'a' && word[i] <= 'z') {
+                ch[i] = (char) (word[i] - 32);
+            } else {
+                ch[i] = word[i];
+            }
         }
-        return new MyStringBuilder(newStr);
-    }
-
-    String MyToString() {
-        return build;
-    }
+        return new MyStringBuilder(ch);}
 
     int length() {
-        return build.length();
+        return word.length;
     }
 
     char charAt(int index) {
-        return build.charAt(index);
+        return word[index];
+    }
+
+    char[] getWord() {
+        return word;
     }
 }

@@ -5,7 +5,6 @@ import java.util.GregorianCalendar;
 
 class MyDate {
 
-    GregorianCalendar calendar = new GregorianCalendar();
     private final int year;
     private final int month;
     private final int day;
@@ -23,6 +22,7 @@ class MyDate {
     }
 
     MyDate(long elapsedTime) {
+        GregorianCalendar calendar = new GregorianCalendar();
         calendar.setTimeInMillis(elapsedTime);
         year = calendar.get(Calendar.YEAR);
         month = calendar.get(Calendar.MONTH);

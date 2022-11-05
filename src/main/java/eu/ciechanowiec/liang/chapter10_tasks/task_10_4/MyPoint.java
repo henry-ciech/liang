@@ -1,11 +1,11 @@
 package eu.ciechanowiec.liang.chapter10_tasks.task_10_4;
 
-public class MyPoint {
+public class MyPoint { //I need publics here
 
     private double x;
     private double y;
 
-    public MyPoint() { //I need publics here
+    MyPoint() {
         x = 0;
         y = 0;
     }
@@ -37,7 +37,6 @@ public class MyPoint {
     }
 
     public boolean onTheLineSegment(MyPoint p0, MyPoint p1) {
-
         return onTheLineSegment(p0.x, p0.y, p1.x, p1.y, x, y);
     }
 

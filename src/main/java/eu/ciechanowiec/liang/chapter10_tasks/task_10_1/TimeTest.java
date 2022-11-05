@@ -8,9 +8,9 @@ class TimeTest {
         Time time3 = new Time(5, 23, 55);
 
         System.out.printf("""
-                time1: %d:%d:%d
-                time2: %d:%d:%d
-                time3: %d:%d:%d
+                time1: %02d:%02d:%02d
+                time2: %02d:%02d:%02d
+                time3: %02d:%02d:%02d
                 """,
                 time1.getHour(), time1.getMinute(), time1.getSecond(),
                 time2.getHour(), time2.getMinute(), time2.getSecond(),
