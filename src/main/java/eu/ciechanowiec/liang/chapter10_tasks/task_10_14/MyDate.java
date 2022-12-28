@@ -3,7 +3,7 @@ package eu.ciechanowiec.liang.chapter10_tasks.task_10_14;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
-class MyDate {
+public class MyDate {
 
     private final int year;
     private final int month;

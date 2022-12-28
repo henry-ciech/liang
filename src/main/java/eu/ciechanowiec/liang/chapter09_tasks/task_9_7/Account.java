@@ -2,14 +2,13 @@ package eu.ciechanowiec.liang.chapter09_tasks.task_9_7;
 
 import java.util.Date;
 
-class Account {
+public class Account {
 
     private int id = 0;
-    private double balance = 0;
+    protected double balance = 0;
     private double annualInterestRate = 0;
     private final Date dateCreated;
-
-    Account() {
+    public Account() {
         dateCreated = new Date();
     }
 
@@ -55,11 +54,16 @@ class Account {
         return getMonthlyInterestRate() * balance;
     }
 
-    void withdraw(double amount) {
+    protected void withdraw(double amount) {
         balance -= amount;
     }
 
     void deposit(double amount) {
         balance += amount;
+    }
+
+    @Override
+    public String toString() {
+        return "balance " + balance;
     }
 }
